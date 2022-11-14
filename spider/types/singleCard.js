@@ -36,6 +36,11 @@ function getCardInfo(html, page, info) {
                 querySql(queryStr, [id,name,picUrl,score,release_data,finish_state,starring,hot,info]).then(() => {
                     console.log(`${name}数据存储成功！！---当前已完成${hot}个---${info}`);
                 });
+            } else {
+                const queryStr = `update basic_info set hot=${hot} where id=${id}`;
+                querySql(queryStr).then(() => {
+                    console.log(`${id}的数据修改成功！！---${hot}`);
+                });
             };
             if(id === last_id) {
                 Pubsub.publish("sql_end", "yes");
