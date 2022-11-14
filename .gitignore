@@ -1,2 +1,5 @@
 # 过滤模块文件
 node_modules/
+
+# 过滤掉缓存文件
+pubsub/*.txt

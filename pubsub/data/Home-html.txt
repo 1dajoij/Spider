@@ -911,146 +911,146 @@
 				<ul class="myui-vodlist clearfix">
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9981.html" title="入间同学入魔了第三季" data-original="http://sakura.xonlines.com/upload/vod/20221008-1/0d2fdfd2ef200667a236b2d3f5218864.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/9986.html" title="夫妇以上，恋人未满" data-original="http://sakura.xonlines.com/upload/vod/20221009-1/a084cd6fa48d8b382cd132af9178e5e9.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">3.5分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+			<span class="tag" style="background-color: #7091fc;">7.9分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
 		<span class="pic-text text-right">更新至06集</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9981.html" title="入间同学入魔了第三季">入间同学入魔了第三季</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：村瀬步,木村良平,朝井彩加,小野大辅,早见沙织,佐藤拓也,黑田崇矢,斋贺光希,东山奈央,逢坂良太,竹内顺子,谷山纪章,国府田麻理子,岩崎征实,安元洋贵,熊谷健太郎,野上翔</p>	</div>										
+		<h4 class="title text-overflow"><a href="/view/9986.html" title="夫妇以上，恋人未满">夫妇以上，恋人未满</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：大西沙织,宫下早纪,增田俊树,山下诚一郎 Seiichiro Yamashita,和气杏未,高桥未奈美,小仓唯,野上翔,内田修一</p>	</div>										
 </div>								
 					</li>
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9983.html" title="孤独摇滚！" data-original="http://sakura.xonlines.com/upload/vod/20221009-1/41a583c967f6a6a1df78dc44deedf8c2.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/9990.html" title="后宫露营！" data-original="http://sakura.xonlines.com/upload/vod/20221010-1/160e25b5691010843e56bf09ba75a579.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">8.3分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+			<span class="tag" style="background-color: #7091fc;">4.9分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
 		<span class="pic-text text-right">更新至06集</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9983.html" title="孤独摇滚！">孤独摇滚！</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：青山吉能,铃代纱弓,水野朔,长谷川育美</p>	</div>										
+		<h4 class="title text-overflow"><a href="/view/9990.html" title="后宫露营！">后宫露营！</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：柚原みう,陽向葵ゅか,風花ましろ,相模恋,雅仁</p>	</div>										
 </div>								
 					</li>
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9982.html" title="宇崎酱想要玩耍第二季" data-original="http://sakura.xonlines.com/upload/vod/20221009-1/96b02f58db911fcb02681967d76c4e10.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/9988.html" title="彼得·格里尔的贤者时间第二季" data-original="http://sakura.xonlines.com/upload/vod/20221010-1/5a1128abb329bcb0c190ac4fd2a253ac.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">8.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至07集</span>	</a>									
+			<span class="tag" style="background-color: #7091fc;">9.7分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至06集</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9982.html" title="宇崎酱想要玩耍第二季">宇崎酱想要玩耍第二季</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：大空直美,赤羽根健治,高木朋弥,竹达彩奈,秋元羊介,早见沙织,加藤圣奈,石川英郎,三瓶由布子</p>	</div>										
+		<h4 class="title text-overflow"><a href="/view/9988.html" title="彼得·格里尔的贤者时间第二季">彼得·格里尔的贤者时间第二季</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：下野纮,二之宫唯,山村响,竹达彩奈,上原明里,千本木彩花,浅水健太朗,菅生隆之,太田彩华,三宅健太</p>	</div>										
 </div>								
 					</li>
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9961.html" title="被勇者队伍开除的驯兽师，邂逅最强种猫耳少女" data-original="http://sakura.xonlines.com/upload/vod/20221003-1/dba1b89c7cc61ec23d797861ea3664c8.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/10015.html" title="致不灭的你第二季" data-original="http://sakura.xonlines.com/upload/vod/20221024-1/97ec6372a41b31047f408f10d117b5fa.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">5.4分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至07集</span>	</a>									
+			<span class="tag" style="background-color: #7091fc;">2.1分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至04集</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9961.html" title="被勇者队伍开除的驯兽师，邂逅最强种猫耳少女">被勇者队伍开除的驯兽师，邂逅最强种猫耳少女</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：千叶翔也,和气杏未,大久保瑠美</p>	</div>										
+		<h4 class="title text-overflow"><a href="/view/10015.html" title="致不灭的你第二季">致不灭的你第二季</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：川岛零士,津田健次郎,楠木灯,斋贺光希,子安武人</p>	</div>										
 </div>								
 					</li>
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9958.html" title="剑风传奇黄金时代篇" data-original="http://sakura.xonlines.com/upload/vod/20221002-1/e4796087443e3007d3eb95ac6538ee2e.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/9397.html" title="传颂之物二人的白皇" data-original="http://sakura.xonlines.com/upload/vod/20220703-1/15299ad5e6b17a413de867624e17cbb1.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">3.2分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至07集</span>	</a>									
+			<span class="tag" style="background-color: #7091fc;">8.9分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至21集</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9958.html" title="剑风传奇黄金时代篇">剑风传奇黄金时代篇</a></h4>
+		<h4 class="title text-overflow"><a href="/view/9397.html" title="传颂之物二人的白皇">传颂之物二人的白皇</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：利根健太朗,种田梨沙,赤崎千夏,水濑祈,加隈亚衣,原由实,山本希望,樱井孝宏,佐仓绫音,村瀬步,江口拓也,久野美咲,早见沙织,内田夕夜,置鲇龙太郎,菊池幸利,杉山大,三宅麻理惠</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/4998.html" title="新世纪福音战士" data-original="http://sakura.xonlines.com/FileUpload/1734.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">7.9分</span><span class="tag" style="background-color: #ff9900;">1995</span>		</span>
+		<span class="pic-text text-right">完结</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/4998.html" title="新世纪福音战士">新世纪福音战士</a></h4>
 		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
 </div>								
 					</li>
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9957.html" title="后宫之乌" data-original="http://sakura.xonlines.com/upload/vod/20221002-1/6857b41d0b37638ee473072f446d85f8.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/1232.html" title="野良神第二季" data-original="http://sakura.xonlines.com/FileUpload/5732.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">8.1分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至07集</span>	</a>									
+			<span class="tag" style="background-color: #7091fc;">7.6分</span><span class="tag" style="background-color: #ff9900;">2016</span>		</span>
+		<span class="pic-text text-right">13集全</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9957.html" title="后宫之乌">后宫之乌</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：水野朔,水中雅章,八代拓,高野麻里佳</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9956.html" title="间谍过家家第二季" data-original="http://sakura.xonlines.com/upload/vod/20221002-1/92d308fd08d099ca8dca0458cd699390.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">6.1分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至07集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9956.html" title="间谍过家家第二季">间谍过家家第二季</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：江口拓也,种崎敦美,早见沙织,吉野裕行,甲斐田裕子,山路和弘,小野贤章,藤原夏海,加藤英美里,高桥广树</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9955.html" title="点满农民相关技能后，不知为何就变强了。" data-original="http://sakura.xonlines.com/upload/vod/20221002-1/bd973ba2868428250264e4101d088b73.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">8.7分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至07集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9955.html" title="点满农民相关技能后，不知为何就变强了。">点满农民相关技能后，不知为何就变强了。</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：榎木淳弥,田中美海,大久保瑠美,诹访彩花,田村由香里,伊藤昌弘,中原麻衣,滨田贤二</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9939.html" title="作为恶役大小姐就该养魔王" data-original="http://sakura.xonlines.com/upload/vod/20220924-1/dd639a62f8674af46e040e7f7e915e72.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">2.4分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至08集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9939.html" title="作为恶役大小姐就该养魔王">作为恶役大小姐就该养魔王</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：高桥李依,梅原裕一郎,增田俊树</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9790.html" title="德凯奥特曼" data-original="http://sakura.xonlines.com/upload/vod/20220716-1/43c2507d1b08e8776cb052c4dbb2e45e.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">7.1分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至17集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9790.html" title="德凯奥特曼">德凯奥特曼</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：松本大辉,村山优香,大地伸永,小柳友,宫泽佐江,黄川田将也</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/189.html" title="海贼王" data-original="http://sakura.xonlines.com/FileUpload/202105231314371015.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">7.6分</span><span class="tag" style="background-color: #ff9900;">1999</span>		</span>
-		<span class="pic-text text-right">更新至1040集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/189.html" title="海贼王">海贼王</a></h4>
+		<h4 class="title text-overflow"><a href="/view/1232.html" title="野良神第二季">野良神第二季</a></h4>
 		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
 </div>								
 					</li>
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9984.html" title="蓝色监狱" data-original="http://sakura.xonlines.com/upload/vod/20221009-1/f4448e93a5ebf4b7704eb292ba0ad805.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/5031.html" title="魔法少女小圆" data-original="http://sakura.xonlines.com/FileUpload/1690.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">2.7分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至06集</span>	</a>									
+			<span class="tag" style="background-color: #7091fc;">8.8分</span><span class="tag" style="background-color: #ff9900;">2011</span>		</span>
+		<span class="pic-text text-right">全12集</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9984.html" title="蓝色监狱">蓝色监狱</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：浦和希,海渡翼,小野友树,齐藤壮马,中泽匡智,松冈祯丞,千叶翔也,仲村宗悟,梶田大嗣,绵贯龙之介,市川苍,铃村健一,神谷浩史,幸村惠理,诹访部顺一,兴津和幸,岛崎信长,内田雄马,花江夏树,铃木崚汰,樱井孝宏</p>	</div>										
+		<h4 class="title text-overflow"><a href="/view/5031.html" title="魔法少女小圆">魔法少女小圆</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/2517.html" title="七龙珠" data-original="http://sakura.xonlines.com/FileUpload/4328.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">8.0分</span><span class="tag" style="background-color: #ff9900;">1986</span>		</span>
+		<span class="pic-text text-right">全153集</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/2517.html" title="七龙珠">七龙珠</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/2058.html" title="四月是你的谎言" data-original="http://sakura.xonlines.com/FileUpload/4831.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">8.9分</span><span class="tag" style="background-color: #ff9900;">2014</span>		</span>
+		<span class="pic-text text-right">全22集</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/2058.html" title="四月是你的谎言">四月是你的谎言</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/2456.html" title="魔笛MAGI 外传 辛巴德的冒险" data-original="http://sakura.xonlines.com/FileUpload/4411.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">10.0分</span><span class="tag" style="background-color: #ff9900;">2014</span>		</span>
+		<span class="pic-text text-right">更新至5话，</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/2456.html" title="魔笛MAGI 外传 辛巴德的冒险">魔笛MAGI 外传 辛巴德的冒险</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/10025.html" title="明日方舟：黎明前奏" data-original="http://sakura.xonlines.com/upload/vod/20221029-1/d03f2d82a3ec52db27fa7f951bdd2206.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">7.7分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至03集</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/10025.html" title="明日方舟：黎明前奏">明日方舟：黎明前奏</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：黑泽朋世,种崎敦美</p>	</div>										
 </div>								
 					</li>
 					 
@@ -1076,7 +1076,7 @@
 </li>
 										<li>
 	<a href="/view/189.html" title="海贼王">
-		<span class="pull-right  text-muted" style="color: ;">更新至1040集</span>		<span class="badge badge-third">3</span>海贼王	</a>
+		<span class="pull-right  text-muted" style="color: ;">更新至1039集</span>		<span class="badge badge-third">3</span>海贼王	</a>
 </li>
 										<li>
 	<a href="/view/7770.html" title="回复术士的重启人生">
@@ -1145,6 +1145,78 @@
 				<ul class="myui-vodlist clearfix">
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
 						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/9989.html" title="绝代双骄2022" data-original="http://sakura.xonlines.com/upload/vod/20221010-1/f4e208879e1e9041b1de3c5701364859.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">5.1分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至09集</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/9989.html" title="绝代双骄2022">绝代双骄2022</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：谷江山,歪歪,聂曦映,苏尚卿,张杰</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/9944.html" title="魔游纪" data-original="http://sakura.xonlines.com/upload/vod/20220927-1/8d58a782ad6e51cb97ada7758f3d94a1.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">7.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至10集</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/9944.html" title="魔游纪">魔游纪</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/9904.html" title="中华小子2022" data-original="http://sakura.xonlines.com/upload/vod/20220829-1/00c42cb35bd6c6b198984537cabf5dd7.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">4.3分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至24集</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/9904.html" title="中华小子2022">中华小子2022</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：花小兰 唐小龙 陈小虎</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/9000.html" title="书灵记" data-original="http://sakura.xonlines.com/upload/vod/20220518-1/b7ac8a1734814e17c8459f3efdbb5779.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">4.2分</span><span class="tag" style="background-color: #ff9900;">2019</span>		</span>
+		<span class="pic-text text-right">更新至125集</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/9000.html" title="书灵记">书灵记</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/8534.html" title="少年歌行风花雪月篇" data-original="http://sakura.xonlines.com/upload/vod/20220426-1/6a5dc95342d47812e8e788aeb72a447e.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">9.0分</span><span class="tag" style="background-color: #ff9900;">2021</span>		</span>
+		<span class="pic-text text-right">至32集+SP</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/8534.html" title="少年歌行风花雪月篇">少年歌行风花雪月篇</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：张博恒,张杰,杨婧,魏超</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/7218.html" title="凹凸世界第二季" data-original="http://sakura.xonlines.com/FileUpload/201710913474087329.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">8.8分</span><span class="tag" style="background-color: #ff9900;">2017</span>		</span>
+		<span class="pic-text text-right">20集全</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/7218.html" title="凹凸世界第二季">凹凸世界第二季</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
+						<div class="myui-vodlist__box">
 	<a class="myui-vodlist__thumb lazyload" href="/view/9948.html" title="仙王的日常生活第三季" data-original="http://sakura.xonlines.com/upload/vod/20220930-1/4f0c969e2c8f17f682202bd5283e9dd1.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
@@ -1155,136 +1227,64 @@
 		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
 </div>								
 					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/8343.html" title="冰火魔厨" data-original="http://sakura.xonlines.com/FileUpload/202201291453316835.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/9913.html" title="万古神话" data-original="http://sakura.xonlines.com/upload/vod/20220901-1/33b93a5a92caaefd08e56f941a51c588.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">7.0分</span><span class="tag" style="background-color: #ff9900;">2021</span>		</span>
-		<span class="pic-text text-right">更新至50集</span>	</a>									
+			<span class="tag" style="background-color: #7091fc;">6.3分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至30集</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/8343.html" title="冰火魔厨">冰火魔厨</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/7232.html" title="三国演义2017" data-original="http://sakura.xonlines.com/FileUpload/2017102013392966325.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">2.0分</span><span class="tag" style="background-color: #ff9900;">2017</span>		</span>
-		<span class="pic-text text-right">更新至60话</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/7232.html" title="三国演义2017">三国演义2017</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/7346.html" title="斗罗大陆 第一季" data-original="http://sakura.xonlines.com/FileUpload/20181211123151670.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">6.8分</span><span class="tag" style="background-color: #ff9900;">2018</span>		</span>
-		<span class="pic-text text-right">更新至234话</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/7346.html" title="斗罗大陆 第一季">斗罗大陆 第一季</a></h4>
+		<h4 class="title text-overflow"><a href="/view/9913.html" title="万古神话">万古神话</a></h4>
 		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
 </div>								
 					</li>
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/4102.html" title="斗罗大陆" data-original="http://sakura.xonlines.com/FileUpload/2715.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/8875.html" title="九天玄帝诀第二季" data-original="http://sakura.xonlines.com/upload/vod/20220502-1/3547befd274a99b01d8af510fb7bf22f.webp">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">6.0分</span><span class="tag" style="background-color: #ff9900;">2013</span>		</span>
-		<span class="pic-text text-right">更新至234集</span>	</a>									
+			<span class="tag" style="background-color: #7091fc;">5.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至57集</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/4102.html" title="斗罗大陆">斗罗大陆</a></h4>
+		<h4 class="title text-overflow"><a href="/view/8875.html" title="九天玄帝诀第二季">九天玄帝诀第二季</a></h4>
 		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
 </div>								
 					</li>
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/8072.html" title="两不疑" data-original="http://sakura.xonlines.com/FileUpload/202105271124129369.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/8326.html" title="盖世帝尊" data-original="http://sakura.xonlines.com/FileUpload/202201241527319506.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">7.2分</span><span class="tag" style="background-color: #ff9900;">2021</span>		</span>
-		<span class="pic-text text-right">完结</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/8072.html" title="两不疑">两不疑</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9821.html" title="斗破苍穹年番" data-original="http://sakura.xonlines.com/upload/vod/20220731-1/6463b02749d19bea03ec068ea6efd2d1.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">4.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">连载18集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9821.html" title="斗破苍穹年番">斗破苍穹年番</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9822.html" title="星源之主" data-original="http://sakura.xonlines.com/upload/vod/20220731-1/99852f1480bd3700f398efee40fa6700.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">7.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至34集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9822.html" title="星源之主">星源之主</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9922.html" title="石少侠感觉好孤单" data-original="http://sakura.xonlines.com/upload/vod/20220908-1/38cb2bc905fdced42b48de4b9c0d4dac.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">7.3分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至36集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9922.html" title="石少侠感觉好孤单">石少侠感觉好孤单</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9170.html" title="全能高手·动态漫" data-original="http://sakura.xonlines.com/upload/vod/20220606-1/61bcf26ce62f560f7464be172e91555e.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">6.4分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+			<span class="tag" style="background-color: #7091fc;">6.1分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
 		<span class="pic-text text-right">更新至59集</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9170.html" title="全能高手·动态漫">全能高手·动态漫</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：秦墨</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/8242.html" title="绝世武魂" data-original="http://sakura.xonlines.com/FileUpload/202201051706499877.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">7.8分</span><span class="tag" style="background-color: #ff9900;">2020</span>		</span>
-		<span class="pic-text text-right">更新至218集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/8242.html" title="绝世武魂">绝世武魂</a></h4>
+		<h4 class="title text-overflow"><a href="/view/8326.html" title="盖世帝尊">盖世帝尊</a></h4>
 		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
 </div>								
 					</li>
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/8222.html" title="我气哭了百万修炼者" data-original="http://sakura.xonlines.com/FileUpload/202112311554586494.jpg">
+	<a class="myui-vodlist__thumb lazyload" href="/view/9976.html" title="绝代双骄" data-original="http://sakura.xonlines.com/upload/vod/20221007-1/f6676f3c56e3d3acdaf2e145e10ce583.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">5.8分</span><span class="tag" style="background-color: #ff9900;">2021</span>		</span>
-		<span class="pic-text text-right">更新至133集</span>	</a>									
+			<span class="tag" style="background-color: #7091fc;">8.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至9集</span>	</a>									
 	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/8222.html" title="我气哭了百万修炼者">我气哭了百万修炼者</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：万宝鹿,阿旦,糖醋里脊</p>	</div>										
+		<h4 class="title text-overflow"><a href="/view/9976.html" title="绝代双骄">绝代双骄</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：谷江山,歪歪,聂曦映,苏尚卿,张杰</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/8787.html" title="万界仙踪第五季" data-original="http://sakura.xonlines.com/FileUpload/201832120161741656.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">8.9分</span><span class="tag" style="background-color: #ff9900;">2021</span>		</span>
+		<span class="pic-text text-right">更新至155集</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/8787.html" title="万界仙踪第五季">万界仙踪第五季</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：钟巍,Akira明,张妮,Mace,张博恒,小伊,默伶,冷泉夜月,kinsen,芥末,季骜杰,烈之流星</p>	</div>										
 </div>								
 					</li>
 					 
@@ -1379,6 +1379,54 @@
 				<ul class="myui-vodlist clearfix">
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
 						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/2385.html" title="小美人鱼3：爱丽儿的起源" data-original="http://sakura.xonlines.com/FileUpload/4473.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">0.0分</span><span class="tag" style="background-color: #ff9900;">2008</span>		</span>
+		<span class="pic-text text-right">BD高清</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/2385.html" title="小美人鱼3：爱丽儿的起源">小美人鱼3：爱丽儿的起源</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/1970.html" title="驯龙高手2" data-original="http://sakura.xonlines.com/FileUpload/4917.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">6.0分</span><span class="tag" style="background-color: #ff9900;">2014</span>		</span>
+		<span class="pic-text text-right">正片</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/1970.html" title="驯龙高手2">驯龙高手2</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/8790.html" title="魁拔之十万火急" data-original="http://sakura.xonlines.com/upload/vod/20220428-1/e795d203992ee180bf006cd110b96b92.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">8.0分</span><span class="tag" style="background-color: #ff9900;">2011</span>		</span>
+		<span class="pic-text text-right">HD</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/8790.html" title="魁拔之十万火急">魁拔之十万火急</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：竹内顺子,关俊彦,樱井孝宏,柿原彻也,山口理惠,姜广涛,张杰,刘婧荦,王凯,季冠霖,敖磊</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/8541.html" title="喜羊羊与灰太狼之筐出未来" data-original="http://sakura.xonlines.com/upload/vod/20220426-1/94bb6033d9fb207b1dcdfc1326cf849b.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">4.4分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">HD</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/8541.html" title="喜羊羊与灰太狼之筐出未来">喜羊羊与灰太狼之筐出未来</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：祖晴,张琳,邓玉婷,梁颖,刘红韵,高全胜,赵娜</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
+						<div class="myui-vodlist__box">
 	<a class="myui-vodlist__thumb lazyload" href="/view/9288.html" title="境界的彼方剧场版未来篇" data-original="http://sakura.xonlines.com/upload/vod/20220618-1/5e832c6ad153c1a1c6784ea104b13aba.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
@@ -1389,7 +1437,7 @@
 		<p class="text text-overflow text-muted hidden-xs">主演：种田梨沙,大桥贤一郎,茅原实里,铃木达央,川澄绫子,松风雅也,渡边明乃,进藤尚美,山冈百合,丰田萌绘,今野宏美,筱原惠美,日笠阳子,山下诚一郎,菅原雅芳,藤原贵弘</p>	</div>										
 </div>								
 					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
 	<a class="myui-vodlist__thumb lazyload" href="/view/9866.html" title="航海王：红" data-original="http://sakura.xonlines.com/upload/vod/20220807-1/dd881cb9395607e3c5bbf59e746b6ab3.jpg">
 		<span class="play hidden-xs"></span>
@@ -1401,7 +1449,7 @@
 		<p class="text text-overflow text-muted hidden-xs">主演：田中真弓,中井和哉,冈村明美,山口胜平,平田广明,大谷育江,山口由里子,矢尾一树,长岛雄一,宝龟克寿,名冢佳织,津田健次郎</p>	</div>										
 </div>								
 					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
 	<a class="myui-vodlist__thumb lazyload" href="/view/9473.html" title="小黄人大眼萌：神偷奶爸前传" data-original="http://sakura.xonlines.com/upload/vod/20220712-1/d417e6bbd184c12e3bbd997c0205aebb.jpg">
 		<span class="play hidden-xs"></span>
@@ -1413,12 +1461,12 @@
 		<p class="text text-overflow text-muted hidden-xs">主演：史蒂夫·卡瑞尔,皮埃尔·柯芬,艾伦·阿金,塔拉吉·P·汉森,杨紫琼,朱莉·安德鲁斯,拉塞尔·布兰德,尚格·云顿,杜夫·龙格尔,丹尼·特雷霍,露西·劳莱丝,欧阳万成,凯文·迈克尔·理查德森,约翰·迪·马吉欧,罗伯特·菲茨杰拉德·迪格斯,迈克尔·贝亚蒂,威尔·阿奈特,史蒂夫·库根,雷蒙德·S·佩尔西,凯尔·巴尔达,鲍伯·伯根,比务·比林格斯勒拉,大卫·陈,梅里·康德伦,安东尼奥·劳尔·科尔波,黛比·德里贝里,斯嘉丽·艾斯特维兹,杰克·格林,雷蒙·汉密尔顿,亚伦·亨德利,山姆·拉瓦尼诺,达恩·刘易斯,阿玛丽·麦</p>	</div>										
 </div>								
 					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
 	<a class="myui-vodlist__thumb lazyload" href="/view/3572.html" title="魁拔之大战元泱界" data-original="http://sakura.xonlines.com/FileUpload/3250.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">10.0分</span><span class="tag" style="background-color: #ff9900;">2013</span>		</span>
+			<span class="tag" style="background-color: #7091fc;">8.0分</span><span class="tag" style="background-color: #ff9900;">2013</span>		</span>
 		<span class="pic-text text-right">正片</span>	</a>									
 	<div class="myui-vodlist__detail">
 		<h4 class="title text-overflow"><a href="/view/3572.html" title="魁拔之大战元泱界">魁拔之大战元泱界</a></h4>
@@ -1454,7 +1502,7 @@
 	<a class="myui-vodlist__thumb lazyload" href="/view/8799.html" title="猫和老鼠：西部大冒险" data-original="http://sakura.xonlines.com/upload/vod/20220428-1/ecb0f35d5492598990b001c6239a2d4e.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">2.1分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+			<span class="tag" style="background-color: #7091fc;">2.2分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
 		<span class="pic-text text-right">HD</span>	</a>									
 	<div class="myui-vodlist__detail">
 		<h4 class="title text-overflow"><a href="/view/8799.html" title="猫和老鼠：西部大冒险">猫和老鼠：西部大冒险</a></h4>
@@ -1471,54 +1519,6 @@
 	<div class="myui-vodlist__detail">
 		<h4 class="title text-overflow"><a href="/view/8796.html" title="猫女：猎捕">猫女：猎捕</a></h4>
 		<p class="text text-overflow text-muted hidden-xs">主演：斯蒂芬妮·比翠丝,伊丽莎白·吉莱丝,劳伦·科汉,乔纳森·班克斯,柯尔比·豪威尔-巴普蒂斯特,凯斯·大卫,胡凯莉,杰奎琳·奥拉德丝,乔纳森·弗雷克斯,史蒂夫·布卢姆,泽拉·法扎尔,袁文忠,安德鲁·基希诺,埃里克·洛佩斯</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/8733.html" title="芒咕的动物城" data-original="http://sakura.xonlines.com/upload/vod/20220427-1/9667b480997873e1a9ad75e1bd4446b7.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">8.0分</span><span class="tag" style="background-color: #ff9900;">2018</span>		</span>
-		<span class="pic-text text-right">HD</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/8733.html" title="芒咕的动物城">芒咕的动物城</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：沙法特·阿里,Vasay Chaudhry,Hina Dilpazir,Adeel Hashmi,Shabbir Jan,Afzal Khan,Ghulam Mohiuddin,Faisal Qureshi,Ahsan Rahim,Javed Sheikh,Ismail Tara</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9987.html" title="名侦探柯南：万圣节的新娘" data-original="http://sakura.xonlines.com/upload/vod/20221010-1/8ebe37609f6f867126c88539b80309f7.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">7.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">HD</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9987.html" title="名侦探柯南：万圣节的新娘">名侦探柯南：万圣节的新娘</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：高山南,山崎和佳奈,小山力也,高木涉,汤屋敦子,古谷彻,白石麻衣</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/10039.html" title="考古奇兵：翡翠石碑的诅咒" data-original="http://sakura.xonlines.com/upload/vod/20221111-1/ec059381a9b20b7ee4c8427b59c2f55c.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">9.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">HD</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/10039.html" title="考古奇兵：翡翠石碑的诅咒">考古奇兵：翡翠石碑的诅咒</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：奥斯卡·巴贝兰,Luis Posada,米歇尔·珍娜,Anuska Alborg,亚历山德拉·希门内斯,费尔南多·巴尔维德,塞西莉亚·苏亚雷斯,Berta Cortés,Pablo Gómez,何塞·科尔瓦乔,曼努埃尔·伯克,Roser Aldabó,Gloria González,Marcel Navarro,Claudio Serrano,本·库拉</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/10038.html" title="罗宾罗宾" data-original="http://sakura.xonlines.com/upload/vod/20221110-1/f07bff70fbf9d813e2d8b7b851b512f0.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">10.0分</span><span class="tag" style="background-color: #ff9900;">2021</span>		</span>
-		<span class="pic-text text-right">HD</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/10038.html" title="罗宾罗宾">罗宾罗宾</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：勃朗特·卡迈克尔,理查德·E·格兰特,吉莲·安德森</p>	</div>										
 </div>								
 					</li>
 					 
@@ -1613,6 +1613,30 @@
 				<ul class="myui-vodlist clearfix">
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
 						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/10001.html" title="辛普森一家第三十四季" data-original="http://sakura.xonlines.com/upload/vod/20221015-1/d37b9b0107469a0943eaa90022333130.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">2.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
+		<span class="pic-text text-right">更新至07集</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/10001.html" title="辛普森一家第三十四季">辛普森一家第三十四季</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+						<div class="myui-vodlist__box">
+	<a class="myui-vodlist__thumb lazyload" href="/view/8460.html" title="爱，死亡和机器人第一季" data-original="http://sakura.xonlines.com/FileUpload/202204071755169831.jpg">
+		<span class="play hidden-xs"></span>
+		<span class="pic-tag pic-tag-top">
+			<span class="tag" style="background-color: #7091fc;">7.8分</span><span class="tag" style="background-color: #ff9900;">2019</span>		</span>
+		<span class="pic-text text-right">18集全</span>	</a>									
+	<div class="myui-vodlist__detail">
+		<h4 class="title text-overflow"><a href="/view/8460.html" title="爱，死亡和机器人第一季">爱，死亡和机器人第一季</a></h4>
+		<p class="text text-overflow text-muted hidden-xs">主演：斯科特·怀特,诺兰·诺斯,马修·杨·金</p>	</div>										
+</div>								
+					</li>
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+						<div class="myui-vodlist__box">
 	<a class="myui-vodlist__thumb lazyload" href="/view/9926.html" title="中央公园第三季" data-original="http://sakura.xonlines.com/upload/vod/20220909-1/1f704b3af3106bf3a1e26c857d4aacfd.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
@@ -1635,7 +1659,7 @@
 		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
 </div>								
 					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
+										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
 						<div class="myui-vodlist__box">
 	<a class="myui-vodlist__thumb lazyload" href="/view/10035.html" title="疯狂动物城+" data-original="http://sakura.xonlines.com/upload/vod/20221109-1/5c9c4a6ea13fbf5dfd1bdf30df7e11b6.jpg">
 		<span class="play hidden-xs"></span>
@@ -1645,18 +1669,6 @@
 	<div class="myui-vodlist__detail">
 		<h4 class="title text-overflow"><a href="/view/10035.html" title="疯狂动物城+">疯狂动物城+</a></h4>
 		<p class="text text-overflow text-muted hidden-xs">主演：金妮弗·古德温,莫里斯·拉马奇,克里斯汀·贝尔,伊德里斯·艾尔巴,艾伦·图代克,邦尼·亨特,夏洛特·尼克道,凯蒂·洛斯,汤米·钟,内特·托伦斯,蜜雪儿·伯托,唐·雷克,雷蒙德·S·佩尔西,孔令华,伊马里·威廉斯,莉亚·莱瑟姆,珀尔莎·威廉姆斯</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/10001.html" title="辛普森一家第三十四季" data-original="http://sakura.xonlines.com/upload/vod/20221015-1/d37b9b0107469a0943eaa90022333130.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">2.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">更新至06集</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/10001.html" title="辛普森一家第三十四季">辛普森一家第三十四季</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
 </div>								
 					</li>
 										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
@@ -1676,7 +1688,7 @@
 	<a class="myui-vodlist__thumb lazyload" href="/view/7053.html" title="复仇者集结第四季" data-original="http://sakura.xonlines.com/FileUpload/20176232253988976.jpg">
 		<span class="play hidden-xs"></span>
 		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">2.0分</span><span class="tag" style="background-color: #ff9900;">2017</span>		</span>
+			<span class="tag" style="background-color: #7091fc;">6.0分</span><span class="tag" style="background-color: #ff9900;">2017</span>		</span>
 		<span class="pic-text text-right">完结</span>	</a>									
 	<div class="myui-vodlist__detail">
 		<h4 class="title text-overflow"><a href="/view/7053.html" title="复仇者集结第四季">复仇者集结第四季</a></h4>
@@ -1741,18 +1753,6 @@
 	<div class="myui-vodlist__detail">
 		<h4 class="title text-overflow"><a href="/view/7282.html" title="帕丁顿熊2">帕丁顿熊2</a></h4>
 		<p class="text text-overflow text-muted hidden-xs">主演：内详</p>	</div>										
-</div>								
-					</li>
-										<li class="col-lg-6 col-md-6 col-sm-4 col-xs-3 hidden-sm">
-						<div class="myui-vodlist__box">
-	<a class="myui-vodlist__thumb lazyload" href="/view/9906.html" title="星际迷航：下层舰员第三季" data-original="http://sakura.xonlines.com/upload/vod/20220829-1/5c3403062d7b92c47d64d5317b61d158.jpg">
-		<span class="play hidden-xs"></span>
-		<span class="pic-tag pic-tag-top">
-			<span class="tag" style="background-color: #7091fc;">8.0分</span><span class="tag" style="background-color: #ff9900;">2022</span>		</span>
-		<span class="pic-text text-right">完结</span>	</a>									
-	<div class="myui-vodlist__detail">
-		<h4 class="title text-overflow"><a href="/view/9906.html" title="星际迷航：下层舰员第三季">星际迷航：下层舰员第三季</a></h4>
-		<p class="text text-overflow text-muted hidden-xs">主演：尤金·科德罗,达恩·刘易斯,陶尼·纽萨姆,杰瑞·奥康奈尔,杰克·奎德,弗雷德·塔特西奥,吉莲·韦格曼,诺艾尔·维尔斯</p>	</div>										
 </div>								
 					</li>
 					 
