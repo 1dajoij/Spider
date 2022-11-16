@@ -7,13 +7,16 @@ require("./pubsub/processing"); // 订阅到下一个文件爬取完毕后(需�
 require("./pubsub/index"); // 订阅各种消息进行处理
 const spider = require("./spider/pages");
 const {serverObj} = require("./spider/constant");
+
+/**
+ * 测试数据格式
+ */
 // const querySql = require("./mysql");
 
-// const select = `SELECT * FROM basic_info WHERE id=714`
+// const select = `SELECT (id) FROM basic_info WHERE id=714`
 // querySql(select).then((res) => {
-//     console.log(res.length)
+//     console.log(res[0])
 // })
-// 日漫 141 页
 
 const interval = 1000 * 60 * 60 * 18; // 每18小时更新一次数据
 

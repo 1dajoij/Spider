@@ -1,4 +1,5 @@
 const fs = require("fs");
+const querySql = require("../mysql");
 
 const card_href = (id) => {
     return `/view/${id}.html`
@@ -23,8 +24,78 @@ const Readfs = (path) => {
     })
 };
 
+const wait = time => {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res();
+        }, time)
+    })
+};
+
+/**
+ * 对 请求页面错误时的处理
+ * @param {分类 只能传入(0, 1, 2)} classify 
+ * @param {与classify相关({page,type},{pageId},{pageId, episodes})} errInfo 
+ * @returns Promise err 信息需要打印
+ */
+const err_handling = (classify, errInfo) => {
+    return Promise((resolve, reject) => {
+        let queryStr;
+        switch (classify) {
+            case 0:
+                const {page, type} = errInfo;
+                queryStr = `insert into error_pages_list (page,type) values (?,?)`;
+                querySql(queryStr, [Number(page), type]).then(res => {
+                    console.log(`${type}类型的${page}页爬取出现问题,请及时修复!!!`);
+                    resolve();
+                }).catch(err => {
+                    reject("mysql发生未知错误!!!");
+                });
+                break;
+            case 1:
+                const {pageId} = errInfo;
+                queryStr = `insert into error_singlepage_list (pageId) values (?)`;
+                querySql(queryStr, [Number(pageId)]).then(res => {
+                    console.log(`id为${pageId}的详情页爬取出现问题,请及时修复!!!`);
+                    resolve();
+                }).catch(err => {
+                    reject("mysql发生未知错误!!!");
+                });
+                break;
+            case 2:
+                const {id, episodes} = errInfo;
+                queryStr = `select (episodes) from error_episodes_list where pageId=${id}`;
+                querySql(queryStr).then(res => {
+                    // 此页面已经有过错误数据了
+                    if(res.length) {
+                        let str = `${res[0].episodes}&${episodes}`;
+                        queryStr = `update error_episodes_list set episodes=${str} where pageId=${id}`;
+                        querySql(queryStr).then(res => {
+                            console.log(`id为${id}的第${episodes}集爬取出现问题,请及时修复!!!`);
+                            resolve();
+                        })
+                    } else {
+                        queryStr = `insert into error_episodes_list (pageId, episodes) values (?,?)`;
+                        querySql(queryStr, [id, episodes]).then(res => {
+                            console.log(`id为${id}的第${episodes}集爬取出现问题,请及时修复!!!`);
+                            resolve();
+                        })
+                    }
+                }).catch(err => {
+                    reject("mysql发生未知错误!!!");
+                });
+                break;
+            default :
+                reject("请将第一个参数改为[0,1,2]其中一个");
+                break;
+        }
+    });
+}
+
 module.exports = {
     card_href,
     skip_href,
-    Readfs
+    Readfs,
+    wait,
+    err_handling
 }

@@ -1,4 +1,4 @@
-const {skip_href} = require("../../untils");
+const {skip_href, err_handling} = require("../../untils");
 const {publishList} = require("../constant");
 const axios = require("../index");
 const Pubsub = require("pubsub-js");
@@ -30,6 +30,12 @@ function autoRun(id, len, callback) {
         if(!_next.done) {
             _next.value.then(res => {
                 callback(res, counter, publishList[id]);
+            }).catch(err => {
+                // 如果请求出错将 出现错误的页面缓存到sql表中之后在进行集中更改
+                err_handling(0, {page:counter, type: publishList[id]}).catch(err => {
+                    console.log(err);
+                });
+                Pubsub.publish("sql_end", "yes");
             });
         } else {
             // 停止订阅

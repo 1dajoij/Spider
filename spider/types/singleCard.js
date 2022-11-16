@@ -2,6 +2,7 @@ const cheerio = require("cheerio");
 const Pubsub = require("pubsub-js");
 const querySql = require("../../mysql");
 const autoRun = require("../pages/until");
+const {wait} = require("../../untils");
 
 function getPageInfo(id, html) { // 用来获取尾页共多少页 和当前页信息
     const $ = cheerio.load(html);
@@ -10,6 +11,7 @@ function getPageInfo(id, html) { // 用来获取尾页共多少页 和当前页�
 }
 
 /**
+ * **** 用来爬取按热度排名的列表
  * 都为必穿，第三个参数主要为了爬取时有具体信息
  * @param {html} html 
  * @param {页数} page 
@@ -30,7 +32,7 @@ function getCardInfo(html, page, info) {
         const hot = (index + 1) + (page * 30);
         // basic_info还剩 largest_amount 字段 ---(需要在下一层爬取到);
         const select = `SELECT * FROM basic_info WHERE id=${id}`
-        querySql(select).then((res) => {
+        querySql(select).then(async (res) => {
             if(!res.length) {
                 const queryStr = "insert into basic_info (id,name,picUrl,score,release_data,finish_state,starring,hot,type) values (?,?,?,?,?,?,?,?,?)"
                 querySql(queryStr, [id,name,picUrl,score,release_data,finish_state,starring,hot,info]).then(() => {
@@ -43,6 +45,8 @@ function getCardInfo(html, page, info) {
                 });
             };
             if(id === last_id) {
+                // 每请求一次间隔 2 ~ 5 s
+                await wait(parseFloat(Math.random() * 3 + 2) * 1000);
                 Pubsub.publish("sql_end", "yes");
             };
         })
