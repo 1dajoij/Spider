@@ -15,7 +15,11 @@ publishList.forEach(item => {
             } else {
                 console.log(`${item}存储成功！！！`);
                 if(item === publishList[publishList.length-1]) {
-                    Pubsub.publish("start_Spider", data)
+                    /**
+                     * 节省时间先用  start_specific
+                     */
+                    // Pubsub.publish("start_Spider", data);
+                    Pubsub.publish("start_specific");
                 }
             }
         });

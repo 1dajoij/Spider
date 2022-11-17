@@ -5,7 +5,7 @@ const {Readfs} = require("../untils");
 const {getPageInfo} = require("../spider/types/singleCard");
 
 Pubsub.subscribe("start_specific", () => {
-
+    
 });
 
 function Path(p) {
@@ -42,9 +42,9 @@ function autoFsRun(g) {
     }
 }
 
-// 用来更新基础数据 --- 不做取消监听
-Pubsub.subscribe("start_Spider",(name, data) => {
-    const list = data.slice(1);
-    console.log("开始爬取类型页面数据！");
-    autoFsRun(fsGen(list));
-});
+// 用来更新基础数据 --- 不做取消监听  ---- 目前已经爬取结束为了节省时间先不开
+// Pubsub.subscribe("start_Spider",(name, data) => {
+//     const list = data.slice(1);
+//     console.log("开始爬取类型页面数据！");
+//     autoFsRun(fsGen(list));
+// });
