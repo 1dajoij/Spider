@@ -15,7 +15,7 @@ publishList.forEach(item => {
             } else {
                 console.log(`${item}存储成功！！！`);
                 if(item === publishList[publishList.length-1]) {
-                    Pubsub.publish("home_info", publishList);
+                    Pubsub.publish("start_Spider", data)
                 }
             }
         });

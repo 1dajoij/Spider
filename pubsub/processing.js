@@ -42,16 +42,9 @@ function autoFsRun(g) {
     }
 }
 
-
+// 用来更新基础数据 --- 不做取消监听
 Pubsub.subscribe("start_Spider",(name, data) => {
     const list = data.slice(1);
     console.log("开始爬取类型页面数据！");
     autoFsRun(fsGen(list));
 });
-
-Pubsub.subscribe("home_info", (name, data) => {
-    // 仅爬取主页的所有分类项的id(暂时先不写)
-    if(!serverObj.get("isServer_Over")) { // 仅在刚启动服务器时 发布 爬取其他页面的任务
-        Pubsub.publish("start_Spider", data);// 发布爬取 电影页数据的任务
-    }
-})

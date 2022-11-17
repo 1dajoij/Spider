@@ -13,8 +13,8 @@ const {serverObj} = require("./spider/constant");
  */
 // const querySql = require("./mysql");
 
-// const select = `SELECT (id) FROM basic_info WHERE id=714`
-// querySql(select).then((res) => {
+// const select = `update user_list set user_name=?, password=? where id = 1`
+// querySql(select, ["冯新天", "01"]).then((res) => {
 //     console.log(res[0])
 // })
 

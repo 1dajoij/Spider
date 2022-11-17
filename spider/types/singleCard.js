@@ -39,15 +39,15 @@ function getCardInfo(html, page, info) {
                     console.log(`${name}数据存储成功！！---当前已完成${hot}个---${info}`);
                 });
             } else {
-                const queryStr = `update basic_info set hot=${hot} where id=${id}`;
-                querySql(queryStr).then(() => {
+                const queryStr = `update basic_info set hot=?,name=?,picUrl=?,score=?,release_data=?,finish_state=?,starring=? where id=${id}`;
+                querySql(queryStr,[hot,name,picUrl,score,release_data,finish_state,starring]).then(() => {
                     console.log(`${id}的数据修改成功！！---${hot}`);
                 });
             };
             if(id === last_id) {
                 // 每请求一次间隔 2 ~ 5 s
                 await wait(parseFloat(Math.random() * 3 + 2) * 1000);
-                Pubsub.publish("sql_end", "yes");
+                Pubsub.publish("sql_end");
             };
         })
     });
