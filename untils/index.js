@@ -92,13 +92,13 @@ const err_handling = (classify, errInfo) => {
                         let str = `${res[0].episodes}&${episodes}`;
                         queryStr = `update error_episodes_list set episodes=${str} where pageId=${id}`;
                         querySql(queryStr).then(res => {
-                            console.log(`id为${id}的第${episodes}集爬取出现问题,请及时修复!!!`);
+                            console.log(`更新: id为${id}的第${episodes}集爬取出现问题,请及时修复!!!`);
                             resolve();
                         })
                     } else {
                         queryStr = `insert into error_episodes_list (pageId, episodes) values (?,?)`;
                         querySql(queryStr, [id, episodes]).then(res => {
-                            console.log(`id为${id}的第${episodes}集爬取出现问题,请及时修复!!!`);
+                            console.log(`新增: id为${id}的第${episodes}集爬取出现问题,请及时修复!!!`);
                             resolve();
                         })
                     }
