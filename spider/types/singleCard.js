@@ -1,7 +1,7 @@
 const cheerio = require("cheerio");
 const Pubsub = require("pubsub-js");
 const querySql = require("../../mysql");
-const autoRun = require("../pages/until");
+const {autoRun} = require("../pages/until");
 const {wait} = require("../../untils");
 
 function getPageInfo(id, html) { // 用来获取尾页共多少页 和当前页信息

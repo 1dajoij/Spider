@@ -32,6 +32,27 @@ const wait = time => {
     })
 };
 
+// 从播放页面获取播放链接信息
+const get_movie_url = (html) => {
+    return html.match(/\},"url":"(.*?)","url_next"/)[1].replace(/\\/g,"");
+}
+
+/**
+ * 未匹配到字符串类型的 true|false 默认返回false
+ * @param {接受字符串类型的 true|false} str 
+ * @returns Boolean
+ */
+const str_invertBool = (str) => {
+    switch (str) {
+        case "true":
+            return true;
+        case "false":
+            return false;
+        default:
+            return false;
+    }    
+}
+
 /**
  * 对 请求页面错误时的处理
  * @param {分类 只能传入(0, 1, 2)} classify 
@@ -97,5 +118,7 @@ module.exports = {
     skip_href,
     Readfs,
     wait,
-    err_handling
+    err_handling,
+    str_invertBool,
+    get_movie_url
 }

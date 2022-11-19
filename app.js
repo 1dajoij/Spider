@@ -6,7 +6,6 @@ var logger = require('morgan');
 require("./pubsub/processing"); // 订阅到下一个文件爬取完毕后(需要先执行)
 require("./pubsub/index"); // 订阅各种消息进行处理
 const spider = require("./spider/pages");
-const {serverObj} = require("./spider/constant");
 
 /**
  * 测试数据格式
@@ -32,13 +31,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-app.use((req, res, next) => { // 当数据没有爬取完成时，路由不可用
-  if(!serverObj.get("isServer_Over")) {
-    res.send("数据还在爬取中,请稍后再试!!!");
-  }
-  next();
-});
 
 app.use(logger('dev'));
 app.use(express.json());
