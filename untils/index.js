@@ -60,7 +60,7 @@ const str_invertBool = (str) => {
  * @returns Promise err 信息需要打印
  */
 const err_handling = (classify, errInfo) => {
-    return Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         let queryStr;
         switch (classify) {
             case 0:

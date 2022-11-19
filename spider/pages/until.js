@@ -62,10 +62,9 @@ function UrlAuto(list, episodes, {id, name}) {
     // counter --- 仅用来记录集数;
     let counter = 1;
     const pub = Pubsub.subscribe("movie_url_end", async () => {
-        console.log(`${name}---${counter}集已完成`);
         counter++;
         // 保证在 1~2 秒内爬取一次
-        await wait(parseFloat(Math.random() + 1) * 1000);
+        // await wait(parseFloat(Math.random() + 1) * 1000);
         Run(g);
     });
 
@@ -76,8 +75,11 @@ function UrlAuto(list, episodes, {id, name}) {
             _next.value.then(res => {
                 const url = get_movie_url(res);
                 episodes = [...episodes, url];
+                console.log(`${name}---${counter}集已完成`);
                 Pubsub.publish("movie_url_end");
             }).catch(() => {
+                // 错误时用空字符串占位
+                episodes = [...episodes, ""];
                 err_handling(2, {id, episodes: counter}).catch(err => {
                     console.log(err);
                 });

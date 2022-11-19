@@ -13,10 +13,10 @@ function getSpecific(html, obj, needList=2) {
     let director = [];
     if($(".myui-content__detail [class=data]:last").find("a").length) {
         $(".myui-content__detail [class=data]:last").find("a").each((index, item) => {
-            director.push($(item).text());
+            director = [...director, $(item).text()]
         });
     } else {
-        director.push("未知");
+        director = [...director, "未知"];
     }
     
     director = director.join("&");
@@ -27,7 +27,7 @@ function getSpecific(html, obj, needList=2) {
     // 相同类型动漫id
     let same_type_list = [];
     $(".myui-vodlist__box").find(".myui-vodlist__thumb").each((_,item) => {
-        same_type_list.push($(item).attr("href").match(/view\/(.*?)\.html/)[1]);
+        same_type_list = [...same_type_list, $(item).attr("href").match(/view\/(.*?)\.html/)[1]]
     });
     same_type_list = same_type_list.join("&");
 
@@ -49,10 +49,9 @@ function getSpecific(html, obj, needList=2) {
         const list = new Array(len+1).fill(new Array());
         for(let i = 1;i <= len;i++) {
             $(`div#playlist${i}`).find("a").each((_, item) => {
-                list[i].push($(item).attr("href"));
-            })
+                list[i] = [...list[i], $(item).attr("href")]
+            });
         };
-
         // 当list的子数组长度不同时,获取长度最长的作为返回
         // lens 为最大的, 且当list的子数组长度相同时, 返回索引为needList的数组
         let index = 0, lens = 0;
@@ -87,7 +86,7 @@ function getSpecific(html, obj, needList=2) {
                 });
             };
         })
-    })
+    });
     UrlAuto(urlList, [], obj);
 };
 
