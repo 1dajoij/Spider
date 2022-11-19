@@ -64,7 +64,7 @@ function UrlAuto(list, episodes, {id, name}) {
     const pub = Pubsub.subscribe("movie_url_end", async () => {
         counter++;
         // 保证在 1~2 秒内爬取一次
-        // await wait(parseFloat(Math.random() + 1) * 1000);
+        await wait(parseFloat(Math.random() + 1) * 1000);
         Run(g);
     });
 

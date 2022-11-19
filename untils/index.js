@@ -90,8 +90,8 @@ const err_handling = (classify, errInfo) => {
                     // 此页面已经有过错误数据了
                     if(res.length) {
                         let str = `${res[0].episodes}&${episodes}`;
-                        queryStr = `update error_episodes_list set episodes=${str} where pageId=${id}`;
-                        querySql(queryStr).then(res => {
+                        queryStr = `update error_episodes_list set episodes=? where pageId=${id}`;
+                        querySql(queryStr,[str]).then(res => {
                             console.log(`更新: id为${id}的第${episodes}集爬取出现问题,请及时修复!!!`);
                             resolve();
                         })
