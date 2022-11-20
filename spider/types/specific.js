@@ -33,13 +33,15 @@ async function getSpecific(html, obj, needList=1) {
     same_type_list = same_type_list.join("&");
 
     // 最后更新时间
-    const last_updata_time = $(".myui-content__detail").find(".text-red").text().match(/\/(.*)/)[1];
+    let last_updata_time = $(".myui-content__detail").find(".text-red").text().match(/\/(.*)/);
+    last_updata_time = last_updata_time ? last_updata_time[1] : ""
 
     // 地区
     const region = $("#rating + .data").find(".split-line + .text-muted").text();
 
     // 是否更新完成
-    const str = $(".myui-content__detail").find(".text-red").text().match(/(.*?)\//)[1];
+    str = $(".myui-content__detail").find(".text-red").text().match(/(.*?)\//);
+    str = str ? str[1] : "";
     const isUpdate = String(Boolean(str.match(/(完|全)/)));
 
     /**
@@ -69,21 +71,21 @@ async function getSpecific(html, obj, needList=1) {
         return list[index];
     }
     const urlList = Compare($("#desc+div .myui-panel_hd .nav-tabs").find("a").length);
-    const pub = Pubsub.subscribe("movie_sql_start", (_,episodes) => {
+    const pub = Pubsub.subscribe("movie_sql_start", (_,{episodes,id}) => {
         episodes = episodes.join("&");
-        const select = `SELECT * FROM specific_info WHERE id=${obj.id}`
+        const select = `SELECT * FROM specific_info WHERE id=${id}`
         querySql(select).then(async (res) => {
             if(!res.length) {
                 const queryStr = "insert into specific_info (id,director,brief_introduction,same_type_list,last_updata_time,region,isUpdate,episodes) values (?,?,?,?,?,?,?,?)"
-                querySql(queryStr, [obj.id,director,brief_introduction,same_type_list,last_updata_time,region,isUpdate,episodes]).then(() => {
+                querySql(queryStr, [id,director,brief_introduction,same_type_list,last_updata_time,region,isUpdate,episodes]).then(() => {
                     console.log(`${obj.name}-存储成功！！！`);
                     Pubsub.unsubscribe(pub);
                     Pubsub.publish("pages_id_end", obj.name);
                 });
             } else {
-                const queryStr = `update specific_info set director=?,brief_introduction=?,same_type_list=?,last_updata_time=?,region=?,isUpdate=?,episodes=? where id=${obj.id}`;
+                const queryStr = `update specific_info set director=?,brief_introduction=?,same_type_list=?,last_updata_time=?,region=?,isUpdate=?,episodes=? where id=${id}`;
                 querySql(queryStr,[director,brief_introduction,same_type_list,last_updata_time,region,isUpdate,episodes]).then(() => {
-                    console.log(`${obj.id}的数据更新成功！！！`);
+                    console.log(`${id}的数据更新成功！！！`);
                     Pubsub.unsubscribe(pub);
                     Pubsub.publish("pages_id_end", obj.name);
                 });
@@ -93,7 +95,7 @@ async function getSpecific(html, obj, needList=1) {
     if(urlList.length) {
         UrlAuto(urlList, [], obj);
     } else { // 没有播放资源 直接跳过
-        await err_handling(2, {id: obj.id, episodes:"暂无资源"});
+        await err_handling(2, {id, episodes:"暂无资源"});
         Pubsub.publish("pages_id_end", obj.name);
     }
 };

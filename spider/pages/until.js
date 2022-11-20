@@ -87,7 +87,7 @@ function UrlAuto(list, episodes, {id, name}) {
             })
         } else {
             Pubsub.unsubscribe(pub);
-            Pubsub.publish("movie_sql_start", episodes)
+            Pubsub.publish("movie_sql_start", {episodes,id})
         }
     }
 }
