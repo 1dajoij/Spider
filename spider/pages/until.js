@@ -74,9 +74,19 @@ function UrlAuto(list, episodes, {id, name}) {
         if(!_next.done) {
             _next.value.then(res => {
                 const url = get_movie_url(res);
-                episodes = [...episodes, url];
-                console.log(`${name}---${counter}集已完成`);
-                Pubsub.publish("movie_url_end");
+                const reg = /(\.m3u8)$/;
+                if(reg.test(url)) {
+                    episodes = [...episodes, url];
+                    console.log(`${name}---${counter}集已完成`);
+                    Pubsub.publish("movie_url_end");
+                } else {
+                    console.log("此动漫暂无资源！！！");
+                    // 直接拉入黑名单,且结束爬取后续集数
+                    err_handling(3, {id}).catch(err => {
+                        console.log(err);
+                    });
+                    Pubsub.publish("movie_url_end");
+                }
             }).catch(() => {
                 // 错误时用空字符串占位
                 episodes = [...episodes, ""];

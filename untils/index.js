@@ -55,8 +55,8 @@ const str_invertBool = (str) => {
 
 /**
  * 对 请求页面错误时的处理
- * @param {分类 只能传入(0, 1, 2)} classify 
- * @param {与classify相关({page,type},{pageId},{pageId, episodes})} errInfo 
+ * @param {分类 只能传入(0, 1, 2, 3)} classify 
+ * @param {与classify相关({page,type},{pageId},{pageId, episodes},{id})} errInfo 
  * @returns Promise err 信息需要打印
  */
 const err_handling = (classify, errInfo) => {
@@ -99,6 +99,22 @@ const err_handling = (classify, errInfo) => {
                         queryStr = `insert into error_episodes_list (pageId, episodes) values (?,?)`;
                         querySql(queryStr, [id, episodes]).then(res => {
                             console.log(`新增: id为${id}的第${episodes}集爬取出现问题,请及时修复!!!`);
+                            resolve();
+                        })
+                    }
+                }).catch(err => {
+                    reject(err);
+                });
+                break;
+            case 3: 
+                const {_id} = errInfo;
+                queryStr = `select * from black_list_movie where id=${_id}`;
+                querySql(queryStr).then(res => {
+                    // 将此动漫拉入黑名单
+                    if(!res.length) {
+                        queryStr = `insert into error_episodes_list (id) values (?)`;
+                        querySql(queryStr, [_id]).then(res => {
+                            console.log(`${_id}已被拉入黑名单`);
                             resolve();
                         })
                     }

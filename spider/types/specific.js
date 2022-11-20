@@ -49,10 +49,16 @@ async function getSpecific(html, obj, needList=1) {
      */
     // 视频链接信息
     function Compare(len) {
+        // 默认选择页面高亮的链接  有无尽高速时选 无尽高速链接  --- id 为 1036 之前都不是
         const list = new Array(len+1).fill(new Array());
+        needList = Number($(`li.active [href*=playlist]`).attr("href").match(/(\d+)/)[1]);
         for(let i = 1;i <= len;i++) {
             $(`div#playlist${i}`).find("a").each((_, item) => {
-                list[i] = [...list[i], $(item).attr("href")]
+                list[i] = [...list[i], $(item).attr("href")];
+                const reg = /无尽高速/;
+                if(reg.test($(`div#playlist${i}`).text())) {
+                    needList = i;
+                };
             });
         };
         // 当list的子数组长度不同时,获取长度最长的作为返回
