@@ -9,7 +9,7 @@ const fs = require("fs");
 // 爬取动画详细信息
 Pubsub.subscribe("start_specific", () => {
     // >= 189
-    const queryStr = `SELECT id,name FROM basic_info where id>=189`;
+    const queryStr = `SELECT id,name FROM basic_info where id>614`;
     querySql(queryStr).then(res => {
         console.log("开始爬取所有动漫详细信息！！！");
         autoIdRun(res);

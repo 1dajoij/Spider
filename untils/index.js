@@ -70,7 +70,7 @@ const err_handling = (classify, errInfo) => {
                     console.log(`${type}类型的${page}页爬取出现问题,请及时修复!!!`);
                     resolve();
                 }).catch(err => {
-                    reject("mysql发生未知错误!!!");
+                    reject(err);
                 });
                 break;
             case 1:
@@ -80,7 +80,7 @@ const err_handling = (classify, errInfo) => {
                     console.log(`id为${pageId}的详情页爬取出现问题,请及时修复!!!`);
                     resolve();
                 }).catch(err => {
-                    reject("mysql发生未知错误!!!");
+                    reject(err);
                 });
                 break;
             case 2:
@@ -103,7 +103,7 @@ const err_handling = (classify, errInfo) => {
                         })
                     }
                 }).catch(err => {
-                    reject("mysql发生未知错误!!!");
+                    reject(err);
                 });
                 break;
             default :

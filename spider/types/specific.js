@@ -2,12 +2,13 @@ const cheerio = require("cheerio");
 const {UrlAuto} = require("../pages/until");
 const Pubsub = require("pubsub-js");
 const querySql = require("../../mysql");
+const {err_handling} = require("../../untils")
 
 /**
  * needList 需要爬取 那一部分的链接
  * 一般只有第二个和第四个是比较清晰的，第二个最优
  */
-function getSpecific(html, obj, needList=2) {
+async function getSpecific(html, obj, needList=1) {
     const $ = cheerio.load(html);
     // 导演
     let director = [];
@@ -60,7 +61,9 @@ function getSpecific(html, obj, needList=2) {
                 lens = list[i].length;
                 index = i;
             } else {
-                lens === list[needList].length ? index = needList : null;
+                if(list[needList]) {
+                    lens === list[needList].length ? index = needList : null;
+                }
             }
         };
         return list[index];
@@ -87,7 +90,12 @@ function getSpecific(html, obj, needList=2) {
             };
         })
     });
-    UrlAuto(urlList, [], obj);
+    if(urlList.length) {
+        UrlAuto(urlList, [], obj);
+    } else { // 没有播放资源 直接跳过
+        await err_handling(2, {id: obj.id, episodes:"暂无资源"});
+        Pubsub.publish("pages_id_end", obj.name);
+    }
 };
 
 
