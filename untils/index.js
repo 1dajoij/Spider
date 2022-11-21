@@ -107,12 +107,12 @@ const err_handling = (classify, errInfo) => {
                 });
                 break;
             case 3: 
-                const {_id} = errInfo;
+                const {id:_id} = errInfo;
                 queryStr = `select * from black_list_movie where id=${_id}`;
                 querySql(queryStr).then(res => {
                     // 将此动漫拉入黑名单
                     if(!res.length) {
-                        queryStr = `insert into error_episodes_list (id) values (?)`;
+                        queryStr = `insert into black_list_movie (id) values (?)`;
                         querySql(queryStr, [_id]).then(res => {
                             console.log(`${_id}已被拉入黑名单`);
                             resolve();

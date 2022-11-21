@@ -7,16 +7,6 @@ require("./pubsub/processing"); // 订阅到下一个文件爬取完毕后(需�
 require("./pubsub/index"); // 订阅各种消息进行处理
 const spider = require("./spider/pages");
 
-/**
- * 测试数据格式
- */
-// const querySql = require("./mysql");
-
-// const select = `update user_list set user_name=?, password=? where id = 1`
-// querySql(select, ["冯新天", "01"]).then((res) => {
-//     console.log(res[0])
-// })
-
 const interval = 1000 * 60 * 60 * 18; // 每18小时更新一次数据
 
 setInterval(() => {

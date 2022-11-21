@@ -85,7 +85,8 @@ function UrlAuto(list, episodes, {id, name}) {
                     err_handling(3, {id}).catch(err => {
                         console.log(err);
                     });
-                    Pubsub.publish("movie_url_end");
+                    Pubsub.unsubscribe(pub);
+                    Pubsub.publish("movie_sql_start", {episodes,id});
                 }
             }).catch(() => {
                 // 错误时用空字符串占位
