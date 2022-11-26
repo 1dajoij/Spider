@@ -75,7 +75,8 @@ async function getSpecific(html, obj, needList=1) {
             }
         };
         return list[index];
-    }
+    };
+    const {id, name} = obj;
     const urlList = Compare($("#desc+div .myui-panel_hd .nav-tabs").find("a").length);
     const pub = Pubsub.subscribe("movie_sql_start", (_,{episodes,id}) => {
         episodes = episodes.join("&");
@@ -98,12 +99,7 @@ async function getSpecific(html, obj, needList=1) {
             };
         })
     });
-    if(urlList.length) {
-        UrlAuto(urlList, [], obj);
-    } else { // 没有播放资源 直接跳过
-        await err_handling(2, {id, episodes:"暂无资源"});
-        Pubsub.publish("pages_id_end", obj.name);
-    }
+    UrlAuto(urlList, [], obj);
 };
 
 

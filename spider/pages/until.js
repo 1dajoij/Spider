@@ -57,7 +57,12 @@ function autoRun(id, len, callback) {
  * @param {存放链接列表的数组} episodes 
  * @param {当前爬取的动漫id} id 
  */
-function UrlAuto(list, episodes, {id, name}) {
+async function UrlAuto(list, episodes, {id, name}) {
+    if(!list.length) {
+        await err_handling(2, {id, episodes:"暂无资源"});
+        Pubsub.publish("movie_sql_start", {episodes,id});
+        return;
+    }
     const g = UrlGen(list);
     // counter --- 仅用来记录集数;
     let counter = 1;
