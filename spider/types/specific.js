@@ -51,6 +51,9 @@ async function getSpecific(html, obj, needList=1) {
     function Compare(len) {
         // 默认选择页面高亮的链接  有无尽高速时选 无尽高速链接  --- id 为 1716 之前都不是
         const list = new Array(len+1).fill(new Array());
+        if(!len) {
+            return list[0];
+        }
         needList = Number($(`li.active [href*=playlist]`).attr("href").match(/(\d+)/)[1]);
         for(let i = 1;i <= len;i++) {
             const reg = /无尽高速/;
@@ -77,7 +80,7 @@ async function getSpecific(html, obj, needList=1) {
         return list[index];
     };
     const {id, name} = obj;
-    const urlList = Compare($("#desc+div .myui-panel_hd .nav-tabs").find("a").length);
+    const urlList = Compare($(".myui-panel_hd:has(a.more) ul").find("a").length);
     const pub = Pubsub.subscribe("movie_sql_start", (_,{episodes,id}) => {
         episodes = episodes.join("&");
         const select = `SELECT * FROM specific_info WHERE id=${id}`
