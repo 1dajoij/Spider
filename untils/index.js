@@ -32,6 +32,16 @@ const wait = time => {
     })
 };
 
+// 根据 len 数量返回 "(?,?,?...)" 这种格式
+const sqlVarsStr = len => {
+    let str = "(?"
+    for(let i = 1;i < len;i++) {
+        str += ",?"
+    };
+    str += ")";
+    return str;
+}
+
 // 从播放页面获取播放链接信息
 const get_movie_url = (html) => {
     return html.match(/\},"url":"(.*?)","url_next"/)[1].replace(/\\/g,"");
@@ -129,12 +139,87 @@ const err_handling = (classify, errInfo) => {
     });
 }
 
+// 对黑名单的过滤
+const blacklist_filtering = arr => {
+    return new Promise((resolve, reject) => {
+        if(!arr.length) {
+            resolve(arr);
+        };
+        const sqlStr = `SELECT id from black_list_movie where id in ${sqlVarsStr(arr.length)}`;
+        querySql(sqlStr, arr).then(res => {
+            if(res.length) {
+                res = res.map(item => {
+                    return item.id
+                });
+                arr = arr.filter((item, index) => {
+                    if(!res.includes(item)) {
+                        return item
+                    }
+                });
+            };
+            resolve(arr);
+        }).catch(err => {
+            console.log("sql发生未知错误");
+            resolve(arr);
+        });
+    })
+};
+
+// 根据id取出sql中的基础信息
+/**
+ * 
+ * @param {Array[number],Number} data 
+ * @returns Array[Object]
+ */
+const getSqlBasicInfo = data => {
+    return new Promise((resolve, reject) => {
+        let sqlStr, arrData;
+        if(data instanceof Number) {
+            sqlStr = `Select * FROM basic_info WHERE id = ?`;
+            arrData = [data];
+        } else if(data instanceof Array) {
+            sqlStr = `Select * FROM basic_info WHERE id in ${sqlVarsStr(data.length)}`;
+            arrData = [...data];
+        } else {
+            resolve([]);
+        };
+        querySql(sqlStr, arrData).then(res => {
+            resolve(res);
+        }).catch(err => {
+            resolve([]);
+        });
+    });
+}
+
+
+/**
+ * 
+ * @param {任意的生成器} g 
+ * @param {回调函数,有两个参数需要接收,生成器的值和调用生成器继续进行的函数} callback 
+ * @param {生成器结束时调用的函数, 可以不穿} lastFn
+ */
+const commonAutoGun = (g, callback, lastFn) => {
+    run();
+    function run() {
+        const _next = g.next();
+        if(!_next.done) {
+            callback(_next.value, run);
+        } else {
+            lastFn && lastFn();
+        }
+    }
+};
+
 module.exports = {
     card_href,
     skip_href,
     Readfs,
     wait,
+    sqlVarsStr,
     err_handling,
     str_invertBool,
-    get_movie_url
+    get_movie_url,
+    blacklist_filtering,
+    getSqlBasicInfo,
+    commonAutoGun
 }

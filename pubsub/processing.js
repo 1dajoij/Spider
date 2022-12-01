@@ -48,7 +48,7 @@ function autoFsRun(list) {
             })
         } else {
             Pubsub.unsubscribe(pub);
-            Pubsub.publish("start_specific", "start");
+            // Pubsub.publish("start_specific", "start");
         }
     }
 }

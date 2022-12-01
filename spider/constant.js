@@ -14,6 +14,10 @@ const publishList = [
     "American_comic-html", // 美国漫画
 ];
 
+/**
+ * recommendList: 推荐列表 -- Array 下标代表一周中的每一天
+ * MovieInfo: 最新/热列表 -- Object = {hots, news}: Array
+ */
 const serverObj = new Map(); // 所有数据都在这里
 
 module.exports = {

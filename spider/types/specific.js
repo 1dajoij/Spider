@@ -23,7 +23,7 @@ async function getSpecific(html, obj, needList=1) {
     director = director.join("&");
 
     // 简介
-    const brief_introduction = $("div#desc").find(".data").text();
+    const brief_introduction = $("div#desc").find(".data").text().replace(/🄬/g, "");
     
     // 相同类型动漫id
     let same_type_list = [];
@@ -49,14 +49,14 @@ async function getSpecific(html, obj, needList=1) {
      */
     // 视频链接信息
     function Compare(len) {
-        // 默认选择页面高亮的链接  有无尽高速时选 无尽高速链接  --- id 为 1716 之前都不是
+        // 默认选择页面高亮的链接  有飞速高速时选 飞速高速链接  --- id 为 8185 之前都不是
         const list = new Array(len+1).fill(new Array());
         if(!len) {
             return list[0];
         }
         needList = Number($(`li.active [href*=playlist]`).attr("href").match(/(\d+)/)[1]);
         for(let i = 1;i <= len;i++) {
-            const reg = /无尽高速/;
+            const reg = /飞速高速/;
             if(reg.test($(`[href*=playlist${i}]`).text())) {
                 needList = i;
             };

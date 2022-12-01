@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-require("./pubsub/processing"); // 订阅到下一个文件爬取完毕后(需要先执行)
+// require("./pubsub/processing"); // 订阅到下一个文件爬取完毕后(需要先执行)
 require("./pubsub/index"); // 订阅各种消息进行处理
 const spider = require("./spider/pages");
 
@@ -14,7 +14,6 @@ setInterval(() => {
 }, interval);
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -28,8 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api/get', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
