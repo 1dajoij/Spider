@@ -1,11 +1,11 @@
 const cheerio = require("cheerio");
-const {getSqlBasicInfo, blacklist_filtering} = require("../../untils");
+const {getSqlBasicInfo} = require("../../untils");
 
 function getHomePageInfo(html) {
     return new Promise(async (resolve, reject) => {
         const $ = cheerio.load(html);
         // Array 下标代表一周中的每一天
-        const recommendList = await getSqlBasicInfo(await getRecommend($));
+        const recommendList = await getRecommend($);
         // Object
         const MovieInfo = await getMovieInfo($);
 
@@ -34,7 +34,7 @@ function getRecommend($) {
             id && (arr[i] = [...arr[i], id]);
         })
     });
-    return blacklist_filtering(arr);
+    return arr;
 };
 
 // news & hots
@@ -65,8 +65,8 @@ function getMovieInfo($) {
                 };
                 id && (hots = [...hots, id]);
             })
-            news = await getSqlBasicInfo(await blacklist_filtering(news));
-            hots = await getSqlBasicInfo(await blacklist_filtering(hots));
+            news = await getSqlBasicInfo(news);
+            hots = await getSqlBasicInfo(hots);
             obj[type] = {news, hots};
             if(len === index) resolve(obj);
         });

@@ -10,14 +10,14 @@ function * request(list) {
 
 let gen = request(list);
 
-function Run(gen) {
+function Run(gen, counter=0) {
     const _next = gen.next();
     if(!_next.done) {
-        const str = publishList.shift();
-        publishList.push(str);
+        const str = publishList[counter];
         _next.value.then(res => {
             Pubsub.publish(str, res);
-            Run(gen);
+            counter++;
+            Run(gen, counter);
         })
     };
 };

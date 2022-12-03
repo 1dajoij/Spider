@@ -139,32 +139,6 @@ const err_handling = (classify, errInfo) => {
     });
 }
 
-// 对黑名单的过滤
-const blacklist_filtering = arr => {
-    return new Promise((resolve, reject) => {
-        if(!arr.length) {
-            resolve(arr);
-        };
-        const sqlStr = `SELECT id from black_list_movie where id in ${sqlVarsStr(arr.length)}`;
-        querySql(sqlStr, arr).then(res => {
-            if(res.length) {
-                res = res.map(item => {
-                    return item.id
-                });
-                arr = arr.filter((item, index) => {
-                    if(!res.includes(item)) {
-                        return item
-                    }
-                });
-            };
-            resolve(arr);
-        }).catch(err => {
-            console.log("sql发生未知错误");
-            resolve(arr);
-        });
-    })
-};
-
 // 根据id取出sql中的基础信息
 /**
  * 
@@ -175,10 +149,19 @@ const getSqlBasicInfo = data => {
     return new Promise((resolve, reject) => {
         let sqlStr, arrData;
         if(data instanceof Number) {
-            sqlStr = `Select * FROM basic_info WHERE id = ?`;
+            sqlStr = `
+                Select * FROM basic_info WHERE id = ?
+                AND id
+                NOT IN (SELECT id from black_list_movie)
+            `;
             arrData = [data];
         } else if(data instanceof Array) {
-            sqlStr = `Select * FROM basic_info WHERE id in ${sqlVarsStr(data.length)}`;
+            sqlStr = `
+                Select * FROM basic_info 
+                WHERE id in ${sqlVarsStr(data.length)}
+                AND id
+                NOT IN (SELECT id from black_list_movie)
+            `;
             arrData = [...data];
         } else {
             resolve([]);
@@ -219,7 +202,6 @@ module.exports = {
     err_handling,
     str_invertBool,
     get_movie_url,
-    blacklist_filtering,
     getSqlBasicInfo,
     commonAutoGun
 }
