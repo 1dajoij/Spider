@@ -1,8 +1,8 @@
-var express = require('express');
-const { serverObj, publishList } = require('../spider/constant');
-const {commonAutoGun, getSqlBasicInfo} = require("../untils");
-const querySql = require("../mysql");
-var router = express.Router();
+const express = require('express');
+const { serverObj, publishList } = require('../../spider/constant');
+const {commonAutoGun, getSqlBasicInfo} = require("../../untils");
+const querySql = require("../../mysql");
+const router = express.Router();
 
 //   /home
 router.get('/home', async function(_, res) {
@@ -91,30 +91,31 @@ router.post("/classify", async (req, res) => {
       nextOffset: Number(limit)+Number(offset),
       code: 200
     }));
+  } else {
+    const [{"count(id)": len}] = await querySql(`
+      SELECT count(id) from basic_info
+      WHERE type="${classify_name}" 
+      AND basic_info.id 
+      NOT IN (SELECT id from black_list_movie)
+    `);
+    const arr = await querySql(`
+      SELECT * from basic_info
+      WHERE type="${classify_name}" 
+      AND basic_info.id 
+      NOT IN (SELECT id from black_list_movie)
+      ORDER BY ${type} ${sort}
+      limit ${limit} offset ${offset}
+    `);
+    obj[classify_name] = {
+      renderList: arr,
+      allListLen: len
+    };
+    res.send({
+      ...obj,
+      nextOffset: Number(limit)+Number(offset),
+      code: 200
+    })
   };
-  const [{"count(id)": len}] = await querySql(`
-    SELECT count(id) from basic_info
-    WHERE type="${classify_name}" 
-    AND basic_info.id 
-    NOT IN (SELECT id from black_list_movie)
-  `);
-  const arr = await querySql(`
-    SELECT * from basic_info
-    WHERE type="${classify_name}" 
-    AND basic_info.id 
-    NOT IN (SELECT id from black_list_movie)
-    ORDER BY ${type} ${sort}
-    limit ${limit} offset ${offset}
-  `);
-  obj[classify_name] = {
-    renderList: arr,
-    allListLen: len
-  };
-  res.send({
-    ...obj,
-    nextOffset: Number(limit)+Number(offset),
-    code: 200
-  })
 });
 
 // /specific
@@ -162,5 +163,16 @@ router.post("/search_lenovo", async (req, res) => {
     code: 200
   })
 });
+
+// /black_list
+router.post("/black_list", async (_, res) => {
+  const blackList = await querySql(`
+    SELECT (id) from black_list_movie
+  `);
+  res.send({
+    code: 200,
+    blackList
+  })
+})
 
 module.exports = router;
