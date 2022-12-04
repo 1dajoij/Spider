@@ -12,14 +12,20 @@ function Path(p) {
 
 function *fsGen(list) {
     for(let i = 0;i < list.length;i++) {
-        yield Readfs(Path(list[i]))
+        yield {
+            counter: i+1,
+            res: Readfs(Path(list[i]))
+        }
     }
 }
 
 function *idGen(list) {
     for(let i = 0;i < list.length;i++) {
         const {id} = list[i]
-        yield axios.get(card_href(id));
+        yield {
+            cout: i,
+            R: axios.get(card_href(id))
+        };
     }
 }
 
@@ -30,11 +36,8 @@ function *idGen(list) {
 function autoFsRun(list) {
     const g = fsGen(list);
 
-    let counter = 1;
-
     const pub = Pubsub.subscribe("pages_end", (_,data) => {
         console.log(`---- ${data}已经结束爬取！！！`);
-        counter++;
         fsRun(g);
     });
     
@@ -43,23 +46,23 @@ function autoFsRun(list) {
     function fsRun(g) {
         const _next = g.next();
         if(!_next.done) {
-            _next.value.then(res => {
+            const {counter, res: R} = _next.value;
+            R.then(res => {
                 getPageInfo(counter, res);
             })
         } else {
             Pubsub.unsubscribe(pub);
-            // Pubsub.publish("start_specific", "start");
+            Pubsub.publish("start_specific", "start");
         }
     }
 }
 
 function autoIdRun(list) {
     const g = idGen(list);
-    // counter 用来查看已完成数量
-    let counter = 0;
+
+    let counter;
 
     const pub = Pubsub.subscribe("pages_id_end", async (_,name) => {
-        counter++;
         console.log(`${name}已存储数据,现已完成${counter}`);
         // 保证在 1~3秒内爬取一次
         await wait(parseFloat(Math.random() * 2 + 1) * 1000);
@@ -71,10 +74,12 @@ function autoIdRun(list) {
     function Run(g) {
         const _next = g.next();
         if(!_next.done) {
-            _next.value.then(res => {
+            const {cout, R} = _next.value;
+            counter = cout;
+            R.then(res => {
                 // 进行爬取操作
-                getSpecific(res, list[counter]);
-            })
+                getSpecific(res, list[cout]);
+            });
         } else {
             // 关闭订阅
             Pubsub.unsubscribe(pub);

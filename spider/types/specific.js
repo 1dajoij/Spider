@@ -8,7 +8,7 @@ const {err_handling} = require("../../untils")
  * needList 需要爬取 那一部分的链接
  * 一般只有第二个和第四个是比较清晰的，第二个最优
  */
-async function getSpecific(html, obj, needList=1) {
+async function getSpecific(html, obj, textReg) {
     const $ = cheerio.load(html);
     // 导演
     let director = [];
@@ -48,7 +48,8 @@ async function getSpecific(html, obj, needList=1) {
      * 默认爬取百度高清,有其他需求传入 needList 字段
      */
     // 视频链接信息
-    function Compare(len) {
+    function Compare(len, textReg=/飞速高速/g) {
+        let needList;
         // 默认选择页面高亮的链接  有飞速高速时选 飞速高速链接  --- id 为 8185 之前都不是
         const list = new Array(len+1).fill(new Array());
         if(!len) {
@@ -56,7 +57,7 @@ async function getSpecific(html, obj, needList=1) {
         }
         needList = Number($(`li.active [href*=playlist]`).attr("href").match(/(\d+)/)[1]);
         for(let i = 1;i <= len;i++) {
-            const reg = /飞速高速/;
+            const reg = textReg;
             if(reg.test($(`[href*=playlist${i}]`).text())) {
                 needList = i;
             };
@@ -73,32 +74,30 @@ async function getSpecific(html, obj, needList=1) {
                 index = i;
             } else {
                 if(list[needList]) {
-                    lens === list[needList].length ? index = needList : null;
+                    lens === list[needList].length ? (index = needList) : null;
                 }
             }
         };
         return list[index];
     };
     const {id, name} = obj;
-    const urlList = Compare($(".myui-panel_hd:has(a.more) ul").find("a").length);
+    const urlList = Compare($(".myui-panel_hd:has(a.more) ul").find("a").length, textReg);
     const pub = Pubsub.subscribe("movie_sql_start", (_,{episodes,id}) => {
         episodes = episodes.join("&");
         const select = `SELECT * FROM specific_info WHERE id=${id}`
         querySql(select).then(async (res) => {
             if(!res.length) {
                 const queryStr = "insert into specific_info (id,director,brief_introduction,same_type_list,last_updata_time,region,isUpdate,episodes) values (?,?,?,?,?,?,?,?)"
-                querySql(queryStr, [id,director,brief_introduction,same_type_list,last_updata_time,region,isUpdate,episodes]).then(() => {
-                    console.log(`${obj.name}-存储成功！！！`);
-                    Pubsub.unsubscribe(pub);
-                    Pubsub.publish("pages_id_end", obj.name);
-                });
+                await querySql(queryStr, [id,director,brief_introduction,same_type_list,last_updata_time,region,isUpdate,episodes]);
+                console.log(`${obj.name}-存储成功！！！`);
+                Pubsub.unsubscribe(pub);
+                Pubsub.publish("pages_id_end", obj.name);
             } else {
                 const queryStr = `update specific_info set director=?,brief_introduction=?,same_type_list=?,last_updata_time=?,region=?,isUpdate=?,episodes=? where id=${id}`;
-                querySql(queryStr,[director,brief_introduction,same_type_list,last_updata_time,region,isUpdate,episodes]).then(() => {
-                    console.log(`${id}的数据更新成功！！！`);
-                    Pubsub.unsubscribe(pub);
-                    Pubsub.publish("pages_id_end", obj.name);
-                });
+                await querySql(queryStr,[director,brief_introduction,same_type_list,last_updata_time,region,isUpdate,episodes]);
+                console.log(`${id}的数据更新成功！！！`);
+                Pubsub.unsubscribe(pub);
+                Pubsub.publish("pages_id_end", obj.name);
             };
         })
     });

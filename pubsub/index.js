@@ -11,7 +11,7 @@ const { Readfs } = require("../untils");
 // 爬取动画详细信息
 Pubsub.subscribe("start_specific", () => {
     // id 为 1716 建议重爬 详情见 specific.js 的 Compare 函数
-    const queryStr = `SELECT id,name FROM basic_info where id>9741`;
+    const queryStr = `SELECT id,name FROM basic_info`;
     querySql(queryStr).then(res => {
         console.log("开始爬取所有动漫详细信息！！！");
         autoIdRun(res);
@@ -21,7 +21,7 @@ Pubsub.subscribe("start_specific", () => {
 
 // 爬取基础信息
 Pubsub.subscribe("start_Spider",(name, data) => {
-    const list = data.slice(1);
+    const list = publishList.slice(1);
     console.log("开始爬取类型页面数据！");
     autoFsRun(list);
 });
@@ -33,8 +33,8 @@ Pubsub.subscribe("home-start", async () => {
     for(let key in obj) {
         serverObj.set(key, obj[key]);
     };
-    console.log("接口已可用！！")
-    // Pubsub.publish("start_Spider", publishList);
+    console.log("接口已可用！！");
+    Pubsub.publish("start_Spider");
 });
 
 // 分别爬取5个重要起始页

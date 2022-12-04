@@ -75,20 +75,32 @@ const err_handling = (classify, errInfo) => {
         switch (classify) {
             case 0:
                 const {page, type} = errInfo;
-                queryStr = `insert into error_pages_list (page,type) values (?,?)`;
-                querySql(queryStr, [Number(page), type]).then(res => {
-                    console.log(`${type}类型的${page}页爬取出现问题,请及时修复!!!`);
-                    resolve();
+                queryStr = `SELECT id from error_pages_list WHERE page=? AND type=?`;
+                querySql(queryStr, [Number(page), type]).then(async res => {
+                    if(!res.length) {
+                        queryStr = `insert into error_pages_list (page,type) values (?,?)`;
+                        await querySql(queryStr, [Number(page), type])
+                        console.log(`${type}类型的${page}页爬取出现问题,请及时修复!!!`);
+                        resolve();
+                    } else {
+                        resolve();
+                    }
                 }).catch(err => {
                     reject(err);
                 });
                 break;
             case 1:
                 const {pageId} = errInfo;
-                queryStr = `insert into error_singlepage_list (pageId) values (?)`;
-                querySql(queryStr, [Number(pageId)]).then(res => {
-                    console.log(`id为${pageId}的详情页爬取出现问题,请及时修复!!!`);
-                    resolve();
+                queryStr = `SELECT id from error_singlepage_list WHERE id=?`;
+                querySql(queryStr, [Number(pageId)]).then(async res => {
+                    if(!res.length) {
+                        queryStr = `insert into error_singlepage_list (id) values (?)`;
+                        await querySql(queryStr, [Number(pageId)]);
+                        console.log(`id为${pageId}的详情页爬取出现问题,请及时修复!!!`);
+                        resolve();
+                    } else {
+                        resolve();
+                    }
                 }).catch(err => {
                     reject(err);
                 });
@@ -193,6 +205,28 @@ const commonAutoGun = (g, callback, lastFn) => {
     }
 };
 
+// 添加或删除 在sql中需要 更新播放数据 的 id
+const updata_sql = async (id, remove) => {
+    if(remove) {
+        await querySql(`
+            DELETE FROM need_updata_list WHERE id=${id}
+        `);
+        return;
+    } else {
+        const [{"count(id)": n}] = await querySql(`
+            SELECT count(id) from basic_info WHERE id=${id}
+        `);
+        if(!n) return;
+        const [{"count(id)": r}] = await querySql(`
+            SELECT count(id) from need_updata_list WHERE id=${id}
+        `);
+        if(r) return;
+        await querySql(`
+            INSERT INTO need_updata_list (id) values (${id})
+        `);
+    }
+}
+
 module.exports = {
     card_href,
     skip_href,
@@ -203,5 +237,6 @@ module.exports = {
     str_invertBool,
     get_movie_url,
     getSqlBasicInfo,
-    commonAutoGun
+    commonAutoGun,
+    updata_sql
 }

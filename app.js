@@ -3,7 +3,11 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-// require("./pubsub/processing"); // 订阅到下一个文件爬取完毕后(需要先执行)
+// const querySql = require('./mysql')
+
+// querySql(`
+//     INSERT INTO need_updata_list (id) values (17)
+// `);
 require("./pubsub/index"); // 订阅各种消息进行处理
 const spider = require("./spider/pages");
 
