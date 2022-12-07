@@ -145,7 +145,7 @@ const err_handling = (classify, errInfo) => {
                 });
                 break;
             default :
-                reject("请将第一个参数改为[0,1,2]其中一个");
+                reject("请将第一个参数改为[0,1,2,3]其中一个");
                 break;
         }
     });
@@ -205,26 +205,34 @@ const commonAutoGun = (g, callback, lastFn) => {
     }
 };
 
-// 添加或删除 在sql中需要 更新播放数据 的 id
-const updata_sql = async (id, remove) => {
-    if(remove) {
-        await querySql(`
-            DELETE FROM need_updata_list WHERE id=${id}
-        `);
-        return;
-    } else {
-        const [{"count(id)": n}] = await querySql(`
-            SELECT count(id) from basic_info WHERE id=${id}
-        `);
-        if(!n) return;
-        const [{"count(id)": r}] = await querySql(`
-            SELECT count(id) from need_updata_list WHERE id=${id}
-        `);
-        if(r) return;
-        await querySql(`
-            INSERT INTO need_updata_list (id) values (${id})
-        `);
-    }
+/**
+ * 添加或删除 在sql中需要 更新播放数据 的 id
+ * @param {资源id} id 
+ * @param {是否移除} remove 
+ * @returns 
+ */
+const updata_sql = (id, remove) => {
+    return new Promise(async (resolve, reject) => {
+        if(remove) {
+            await querySql(`
+                DELETE FROM need_updata_list WHERE id=${id}
+            `);
+            resolve()
+        } else {
+            const [{"count(id)": n}] = await querySql(`
+                SELECT count(id) from basic_info WHERE id=${id}
+            `);
+            if(!n) reject();
+            const [{"count(id)": r}] = await querySql(`
+                SELECT count(id) from need_updata_list WHERE id=${id}
+            `);
+            if(r) reject();
+            await querySql(`
+                INSERT INTO need_updata_list (id) values (${id})
+            `);
+            resolve();
+        }
+    })
 }
 
 module.exports = {

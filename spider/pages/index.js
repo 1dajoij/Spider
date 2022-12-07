@@ -24,6 +24,5 @@ function Run(gen, counter=0) {
 
 const autoRun = () => {
     Run(gen);
-}
-autoRun();
+};
 module.exports = autoRun;

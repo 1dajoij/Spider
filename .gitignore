@@ -3,6 +3,7 @@ node_modules/
 
 # 过滤掉缓存文件
 pubsub/**/*.txt
+!pubsub/data/Home-html.txt
 
 # 过滤掉自己的开发日志
 index.md

@@ -35,10 +35,11 @@ function getCardInfo(html, page, info) {
         if(!res.length) {
             const queryStr = "insert into basic_info (id,name,picUrl,score,release_data,finish_state,starring,hot,type) values (?,?,?,?,?,?,?,?,?)"
             await querySql(queryStr, [id,name,picUrl,score,release_data,finish_state,starring,hot,info]);
+            await updata_sql(id);
             console.log(`${name}数据存储成功！！---当前已完成${hot}个---${info}`);
         } else {
             if(!res[0].finish_state === finish_state) {
-                updata_sql(id);
+                await updata_sql(id);
             };
             const queryStr = `update basic_info set hot=?,name=?,picUrl=?,score=?,release_data=?,finish_state=?,starring=? where id=${id}`;
             await querySql(queryStr,[hot,name,picUrl,score,release_data,finish_state,starring]);

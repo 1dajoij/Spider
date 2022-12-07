@@ -3,19 +3,27 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-// const querySql = require('./mysql')
-
-// querySql(`
-//     INSERT INTO need_updata_list (id) values (17)
-// `);
+const cron = require("node-cron");
 require("./pubsub/index"); // 订阅各种消息进行处理
 const spider = require("./spider/pages");
 
-const interval = 1000 * 60 * 60 * 18; // 每18小时更新一次数据
+// const querySql = require('./mysql');
+// const {updata_sql} = require("./untils");
 
-setInterval(() => {
-  spider(); // 爬取到樱花动漫主页里所有分页的数据
-}, interval);
+// querySql(`
+//   SELECT id from basic_info WHERE id NOT in (SELECT id from specific_info)
+// `).then(res => {
+//   res.forEach(async ({id}) => {
+//     await updata_sql(id);
+//   })
+// })
+
+// 定时爬取数据
+cron.schedule("55 22 * * *", function() {
+  console.log("---------------------");
+  console.log("Running Spider");
+  spider();
+});
 
 const GetRouter = require('./routes/Get');
 const SetRouter = require('./routes/Set');

@@ -8,15 +8,28 @@ const fs = require("fs");
 const { Readfs } = require("../untils");
 
 
-// 爬取动画详细信息
-Pubsub.subscribe("start_specific", () => {
-    // id 为 1716 建议重爬 详情见 specific.js 的 Compare 函数
-    const queryStr = `SELECT id,name FROM basic_info`;
+// 爬取动画详细信息 --- 目前其功能以被更新强化
+// Pubsub.subscribe("start_specific", () => {
+//     // id 为 1716 建议重爬 详情见 specific.js 的 Compare 函数
+//     const queryStr = `SELECT id,name FROM basic_info`;
+//     querySql(queryStr).then(res => {
+//         console.log("开始爬取所有动漫详细信息！！！");
+//         autoIdRun(res);
+//     });
+// });
+
+// 实时更新数据
+Pubsub.subscribe("updata_specific", () => {
+    const queryStr = `
+        SELECT id,name from basic_info
+        WHERE id IN 
+        (SELECT id from need_updata_list)
+    `;
     querySql(queryStr).then(res => {
-        console.log("开始爬取所有动漫详细信息！！！");
-        autoIdRun(res);
+        console.log("开始更新数据库！！！");
+        autoIdRun(res, true);
     });
-});
+})
 
 
 // 爬取基础信息
@@ -34,7 +47,6 @@ Pubsub.subscribe("home-start", async () => {
         serverObj.set(key, obj[key]);
     };
     console.log("接口已可用！！");
-    Pubsub.publish("start_Spider");
 });
 
 // 分别爬取5个重要起始页
@@ -48,7 +60,7 @@ publishList.forEach(item => {
                 // 当5个类型页面结束爬取时
                 if(item === publishList[publishList.length-1]) {
                     // 对主页的数据进行收集
-                    Pubsub.publish("home-start");
+                    Pubsub.publish("start_Spider");
                 }
             }
         });

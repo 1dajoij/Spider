@@ -1,8 +1,8 @@
 const Pubsub = require("pubsub-js");
 const path = require("path");
-const {Readfs, card_href, wait} = require("../untils");
+const {Readfs, card_href, wait, commonAutoGun} = require("../untils");
 const {getPageInfo} = require("../spider/types/singleCard");
-const {getSpecific} = require("../spider/types/specific");
+const {getSpecific, updataSpecific} = require("../spider/types/specific");
 const axios = require("../spider/index");
 
 
@@ -21,7 +21,7 @@ function *fsGen(list) {
 
 function *idGen(list) {
     for(let i = 0;i < list.length;i++) {
-        const {id} = list[i]
+        const {id} = list[i];
         yield {
             cout: i,
             R: axios.get(card_href(id))
@@ -40,9 +40,9 @@ function autoFsRun(list) {
         console.log(`---- ${data}已经结束爬取！！！`);
         fsRun(g);
     });
-    
-    fsRun(g);
 
+    fsRun(g);
+    
     function fsRun(g) {
         const _next = g.next();
         if(!_next.done) {
@@ -52,18 +52,18 @@ function autoFsRun(list) {
             })
         } else {
             Pubsub.unsubscribe(pub);
-            Pubsub.publish("start_specific", "start");
+            Pubsub.publish("updata_specific");
         }
     }
 }
 
-function autoIdRun(list) {
+function autoIdRun(list, updata = false) {
     const g = idGen(list);
 
     let counter;
 
     const pub = Pubsub.subscribe("pages_id_end", async (_,name) => {
-        console.log(`${name}已存储数据,现已完成${counter}`);
+        console.log(`${name}已爬取结束,现已完成${counter+1}`);
         // 保证在 1~3秒内爬取一次
         await wait(parseFloat(Math.random() * 2 + 1) * 1000);
         Run(g);
@@ -78,7 +78,11 @@ function autoIdRun(list) {
             counter = cout;
             R.then(res => {
                 // 进行爬取操作
-                getSpecific(res, list[cout]);
+                if(updata) {
+                    updataSpecific(res, list[cout]);
+                } else {
+                    getSpecific(res, list[cout]);
+                }
             });
         } else {
             // 关闭订阅
