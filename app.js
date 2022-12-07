@@ -6,6 +6,7 @@ const logger = require('morgan');
 const cron = require("node-cron");
 require("./pubsub/index"); // 订阅各种消息进行处理
 const spider = require("./spider/pages");
+const Pubsub = require("pubsub-js");
 
 // const querySql = require('./mysql');
 // const {updata_sql} = require("./untils");
@@ -24,6 +25,8 @@ cron.schedule("55 22 * * *", function() {
   console.log("Running Spider");
   spider();
 });
+
+Pubsub.publish("home-start", true);
 
 const GetRouter = require('./routes/Get');
 const SetRouter = require('./routes/Set');

@@ -40,13 +40,15 @@ Pubsub.subscribe("start_Spider",(name, data) => {
 });
 
 // 将主页的 推荐列表 最新列表 最热列表 获取并存储在 serverObj
-Pubsub.subscribe("home-start", async () => {
+Pubsub.subscribe("home-start", async (bool = false) => {
     const html = await Readfs(path.join(__dirname, "./data/Home-html.txt"));
     const obj = await getHomePageInfo(html);
     for(let key in obj) {
         serverObj.set(key, obj[key]);
     };
-    console.log("接口已可用！！");
+    console.log("接口数据已更新！！！");
+    if(bool) return;
+    Pubsub.publish("start_Spider");
 });
 
 // 分别爬取5个重要起始页
@@ -60,7 +62,7 @@ publishList.forEach(item => {
                 // 当5个类型页面结束爬取时
                 if(item === publishList[publishList.length-1]) {
                     // 对主页的数据进行收集
-                    Pubsub.publish("start_Spider");
+                    Pubsub.publish("home-start");
                 }
             }
         });
