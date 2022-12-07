@@ -8,16 +8,11 @@ require("./pubsub/index"); // 订阅各种消息进行处理
 const spider = require("./spider/pages");
 const Pubsub = require("pubsub-js");
 
-// const querySql = require('./mysql');
-// const {updata_sql} = require("./untils");
 
-// querySql(`
-//   SELECT id from basic_info WHERE id NOT in (SELECT id from specific_info)
-// `).then(res => {
-//   res.forEach(async ({id}) => {
-//     await updata_sql(id);
-//   })
-// })
+// 防止爬取过程中网络超时
+process.on('unhandledRejection', error => {
+  console.error('unhandledRejection', error);
+});
 
 // 定时爬取数据
 cron.schedule("50 23 * * *", function() {
@@ -26,6 +21,7 @@ cron.schedule("50 23 * * *", function() {
   spider();
 });
 
+// 使接口可用
 Pubsub.publish("home-start", true);
 
 const GetRouter = require('./routes/Get');
