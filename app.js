@@ -20,7 +20,7 @@ const Pubsub = require("pubsub-js");
 // })
 
 // 定时爬取数据
-cron.schedule("55 22 * * *", function() {
+cron.schedule("50 23 * * *", function() {
   console.log("---------------------");
   console.log("Running Spider");
   spider();
