@@ -7,7 +7,9 @@ const cron = require("node-cron");
 require("./pubsub/index"); // 订阅各种消息进行处理
 const spider = require("./spider/pages");
 const Pubsub = require("pubsub-js");
-
+const GetRouter = require('./routes/Get');
+const SetRouter = require('./routes/Set');
+const DeleteRouter = require('./routes/Delete');
 
 // 防止爬取过程中网络超时
 process.on('unhandledRejection', error => {
@@ -24,13 +26,8 @@ cron.schedule("50 23 * * *", function() {
 // 使接口可用
 Pubsub.publish("home-start", true);
 
-const GetRouter = require('./routes/Get');
-const SetRouter = require('./routes/Set');
-const DeleteRouter = require('./routes/Delete');
-
 const app = express();
 
-// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

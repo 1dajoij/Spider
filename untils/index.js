@@ -65,30 +65,14 @@ const str_invertBool = (str) => {
 
 /**
  * 对 请求页面错误时的处理
- * @param {分类 只能传入(0, 1, 2, 3)} classify 
- * @param {与classify相关({page,type},{pageId},{pageId, episodes},{id})} errInfo 
+ * @param {分类 只能传入(1, 2, 3)} classify 
+ * @param {与classify相关({pageId},{pageId, episodes},{id})} errInfo 
  * @returns Promise err 信息需要打印
  */
 const err_handling = (classify, errInfo) => {
     return new Promise((resolve, reject) => {
         let queryStr;
         switch (classify) {
-            case 0:
-                const {page, type} = errInfo;
-                queryStr = `SELECT id from error_pages_list WHERE page=? AND type=?`;
-                querySql(queryStr, [Number(page), type]).then(async res => {
-                    if(!res.length) {
-                        queryStr = `insert into error_pages_list (page,type) values (?,?)`;
-                        await querySql(queryStr, [Number(page), type])
-                        console.log(`${type}类型的${page}页爬取出现问题,请及时修复!!!`);
-                        resolve();
-                    } else {
-                        resolve();
-                    }
-                }).catch(err => {
-                    reject(err);
-                });
-                break;
             case 1:
                 const {pageId} = errInfo;
                 queryStr = `SELECT id from error_singlepage_list WHERE id=?`;

@@ -79,7 +79,6 @@ async function getSpecific(html, obj, textReg) {
     UrlAuto(urlList, [], obj);
 };
 
-
 async function updataSpecific(html, {id, name}, textReg) {
     const [{"count(id)": len}] = await querySql(`SELECT count(id) from specific_info WHERE id=${id}`);
     // 如果是未保存过的数据 采用默认爬取的方法
@@ -143,6 +142,30 @@ async function updataSpecific(html, {id, name}, textReg) {
     }
 };
 
+async function updataInfo(html, {id, name}) {
+    const $ = cheerio.load(html);
+    const {
+        director,
+        brief_introduction,
+        same_type_list,
+        last_updata_time,
+        region,
+        isUpdate
+    } = textInfo($);
+    const queryStr = `
+    update specific_info 
+    set director=?,brief_introduction=?,
+    same_type_list=?,last_updata_time=?,
+    region=?,isUpdate=?
+    where id=${id}
+    `;
+    await querySql(queryStr,
+        [director,brief_introduction,same_type_list,last_updata_time,region,isUpdate]
+    );
+    console.log(`id:${id} 信息已更新`)
+    Pubsub.publish("pages_id_end", name);
+}
+
 function textInfo($) {
     // 导演
     let director = [];
@@ -171,8 +194,11 @@ function textInfo($) {
     last_updata_time = last_updata_time ? last_updata_time[1] : ""
 
     // 地区
-    const region = $("#rating + .data").find(".split-line + .text-muted").text();
-
+    let region = [];
+    $("#rating + .data").find(".split-line + .text-muted+a").each((_, el) => {
+        region.push($(el).text())
+    });
+    region = region.join("&");
     // 是否更新完成
     str = $(".myui-content__detail").find(".text-red").text().match(/(.*?)\//);
     str = str ? str[1] : "";
@@ -212,5 +238,6 @@ function getOptimal_list($, textReg = /飞速高速/g) {
 
 module.exports = {
     getSpecific,
-    updataSpecific
+    updataSpecific,
+    updataInfo
 }

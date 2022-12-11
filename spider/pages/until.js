@@ -18,7 +18,7 @@ function *UrlGen(list) {
     for(let i = 0;i < list.length;i++) {
         yield {
             R: axios.get(list[i]),
-            counter: i+1
+            counter: i
         };
     }
 };
@@ -42,10 +42,7 @@ function autoRun(id, len, callback) {
             p.then(res => {
                 callback(res, counter, publishList[id]);
             }).catch(err => {
-                // 如果请求出错将 出现错误的页面缓存到sql表中之后在进行集中更改
-                err_handling(0, {page:counter, type: publishList[id]}).catch(err => {
-                    console.log(err);
-                });
+                console.error(err);
                 Pubsub.publish("sql_end");
             });
         } else {
@@ -80,21 +77,19 @@ async function UrlAuto(list, episodes, {id, name}) {
         const _next = g.next();
         if(!_next.done) {
             const {R, counter} = _next.value;
-            R.then(res => {
+            R.then(async res => {
                 const url = get_movie_url(res);
                 const reg = /(\.m3u8)$/;
                 if(reg.test(url)) {
                     episodes = [...episodes, url];
-                    console.log(`${name}---${counter}集已完成`);
+                    console.log(`${name}---${counter+1}集已完成`);
                     Pubsub.publish("movie_url_end");
                 } else {
                     console.log("此动漫暂无资源！！！");
                     // 直接拉入黑名单,且结束爬取后续集数
-                    err_handling(3, {id}).catch(err => {
-                        console.log(err);
-                    });
+                    await err_handling(3, {id});
                     Pubsub.unsubscribe(pub);
-                    Pubsub.publish("movie_sql_start", {episodes,id});
+                    Pubsub.publish("movie_sql_start", {episodes:[],id});
                 }
             }).catch(() => {
                 // 错误时用空字符串占位

@@ -2,7 +2,6 @@ let mysql = require('mysql')
 
 let options = {
     host:"localhost",
-    //port:"3306",//可选，默认式3306
     user:"root",
     password:"123456",
     database:"yhdm"

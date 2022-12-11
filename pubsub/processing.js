@@ -1,8 +1,8 @@
 const Pubsub = require("pubsub-js");
 const path = require("path");
-const {Readfs, card_href, wait, commonAutoGun} = require("../untils");
+const {Readfs, card_href, wait} = require("../untils");
 const {getPageInfo} = require("../spider/types/singleCard");
-const {getSpecific, updataSpecific} = require("../spider/types/specific");
+const {getSpecific, updataSpecific, updataInfo} = require("../spider/types/specific");
 const axios = require("../spider/index");
 
 
@@ -78,6 +78,9 @@ function autoIdRun(list, updata = false) {
             counter = cout;
             R.then(res => {
                 // 进行爬取操作
+
+                // 修复信息错误
+                // updataInfo(res, list[cout])
                 if(updata) {
                     updataSpecific(res, list[cout]);
                 } else {
