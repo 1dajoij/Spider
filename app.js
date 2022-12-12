@@ -11,7 +11,6 @@ const {Readfs} = require("./untils");
 const {serverObj} = require("./spider/constant");
 const {getHomePageInfo} = require("./spider/types/homeSpider");
 
-
 async function update() {
   const html = await Readfs(path.join(__dirname, "./pubsub/data/Home-html.txt"));
     const obj = await getHomePageInfo(html);
@@ -20,6 +19,7 @@ async function update() {
     };
     console.log("接口数据已更新！！！");
 };
+
 update();
 // 定时爬取数据
 cron.schedule("50 23 * * *", update);

@@ -1,5 +1,5 @@
 const cheerio = require("cheerio");
-const {getSqlBasicInfo} = require("../../untils");
+const { getSqlBasicInfo } = require("../../untils");
 
 function getHomePageInfo(html) {
     return new Promise(async (resolve, reject) => {
@@ -91,7 +91,7 @@ function matchingStr(str) {
         default:
             return "";
     }
-}
+};
 
 module.exports = {
     getHomePageInfo

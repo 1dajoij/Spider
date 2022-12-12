@@ -170,7 +170,6 @@ const getSqlBasicInfo = data => {
     });
 }
 
-
 /**
  * 
  * @param {任意的生成器} g 
@@ -217,7 +216,7 @@ const updata_sql = (id, remove) => {
             resolve();
         }
     })
-}
+};
 
 module.exports = {
     card_href,
@@ -230,5 +229,5 @@ module.exports = {
     get_movie_url,
     getSqlBasicInfo,
     commonAutoGun,
-    updata_sql
+    updata_sql,
 }
