@@ -4,27 +4,25 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cron = require("node-cron");
-require("./pubsub/index"); // 订阅各种消息进行处理
-const spider = require("./spider/pages");
-const Pubsub = require("pubsub-js");
 const GetRouter = require('./routes/Get');
 const SetRouter = require('./routes/Set');
 const DeleteRouter = require('./routes/Delete');
+const {Readfs} = require("./untils");
+const {serverObj} = require("./spider/constant");
+const {getHomePageInfo} = require("./spider/types/homeSpider");
 
-// 防止爬取过程中网络超时
-process.on('unhandledRejection', error => {
-  console.error('unhandledRejection', error);
-});
 
+async function update() {
+  const html = await Readfs(path.join(__dirname, "./pubsub/data/Home-html.txt"));
+    const obj = await getHomePageInfo(html);
+    for(let key in obj) {
+        serverObj.set(key, obj[key]);
+    };
+    console.log("接口数据已更新！！！");
+};
+update();
 // 定时爬取数据
-cron.schedule("50 23 * * *", function() {
-  console.log("---------------------");
-  console.log("Running Spider");
-  spider();
-});
-
-// 使接口可用
-Pubsub.publish("home-start", true);
+cron.schedule("50 23 * * *", update);
 
 const app = express();
 

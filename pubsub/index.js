@@ -1,11 +1,12 @@
-const {publishList, serverObj} = require("../spider/constant");
+const {publishList} = require("../spider/constant");
 const {autoFsRun, autoIdRun} = require("./processing");
-const {getHomePageInfo} = require("../spider/types/homeSpider");
+const { updata_sql } = require("../untils");
+const spider = require("../spider/pages");
+const cron = require("node-cron");
 const querySql = require("../mysql");
 const Pubsub = require("pubsub-js");
 const path = require("path");
 const fs = require("fs");
-const { Readfs, updata_sql } = require("../untils");
 
 // 实时更新数据
 Pubsub.subscribe("updata_specific", async() => {
@@ -30,24 +31,11 @@ Pubsub.subscribe("updata_specific", async() => {
     autoIdRun(res, true);
 })
 
-
 // 爬取基础信息
 Pubsub.subscribe("start_Spider",() => {
     const list = publishList.slice(1);
     console.log("开始爬取类型页面数据！");
     autoFsRun(list);
-});
-
-// 将主页的 推荐列表 最新列表 最热列表 获取并存储在 serverObj
-Pubsub.subscribe("home-start", async (_, bool = false) => {
-    const html = await Readfs(path.join(__dirname, "./data/Home-html.txt"));
-    const obj = await getHomePageInfo(html);
-    for(let key in obj) {
-        serverObj.set(key, obj[key]);
-    };
-    console.log("接口数据已更新！！！");
-    if(bool) return;
-    Pubsub.publish("start_Spider");
 });
 
 // 分别爬取5个重要起始页
@@ -61,9 +49,21 @@ publishList.forEach(item => {
                 // 当5个类型页面结束爬取时
                 if(item === publishList[publishList.length-1]) {
                     // 对主页的数据进行收集
-                    Pubsub.publish("home-start");
+                    Pubsub.publish("start_Spider");
                 }
             }
         });
     })
+});
+
+// 防止爬取过程中网络超时
+process.on('unhandledRejection', error => {
+    console.error('unhandledRejection', error);
+});
+
+// 定时爬取数据
+cron.schedule("50 23 * * *", function() {
+    console.log("---------------------");
+    console.log("Running Spider");
+    spider();
 });

@@ -91,10 +91,10 @@ router.post("/errorinfo_id_list", async (_, res) => {
   const queryStr = `
     SELECT * from error_singlepage_list
   `;
-  const res = await querySql(queryStr);
+  const list = await querySql(queryStr);
   res.send({
     code: 200,
-    res,
+    list,
     length: len
   });
 });
@@ -107,10 +107,10 @@ router.post("/error_episodes_list", async (_, res) => {
   const queryStr = `
     SELECT * from error_episodes_list
   `;
-  const res = await querySql(queryStr);
+  const list = await querySql(queryStr);
   res.send({
     code: 200,
-    res,
+    list,
     length: len
   });
 });
