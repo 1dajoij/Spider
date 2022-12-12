@@ -14,8 +14,8 @@ Pubsub.subscribe("updata_specific", async() => {
     const needlist = await querySql(`
         SELECT id from basic_info WHERE id NOT in (SELECT id from specific_info)
     `);
-    needlist.forEach(async item => {
-        await updata_sql(id);
+    needlist.forEach(async (item) => {
+        await updata_sql(item.id);
     });
     const queryStr = `
         SELECT id,name from basic_info
