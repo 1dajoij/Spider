@@ -22,7 +22,7 @@ async function update() {
 
 update();
 // 定时爬取数据
-cron.schedule("50 23 * * *", update);
+cron.schedule("55 23 * * *", update);
 
 const app = express();
 

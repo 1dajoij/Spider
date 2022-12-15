@@ -7,22 +7,47 @@ let options = {
     database:"yhdm"
 }
 
+let db = null;
+let pingInterval;
 
-let con = mysql.createConnection(options);
+// 如果数据连接出错，则重新连接
+function handleError(err) {
+    logger.info(err.stack || err);
+    connect();
+}
 
-//建立连接
-con.connect((err)=>{
-    //如果建立连接失败
-    if(err){
-        console.log(err)
-    }else{
-        console.log('数据库连接成功')
+// 建立数据库连接
+function connect() {
+    if (db !== null) {
+        db.destroy();
+        db = null;
     }
-})
+
+    db = mysql.createConnection(options);
+    db.connect(function (err) {
+        if (err) {
+            logger.info("error when connecting to db,reConnecting after 2 seconds:", err);
+            setTimeout(connect, 2000);
+        }
+    });
+    db.on("error", handleError);
+
+    // 每个小时ping一次数据库，保持数据库连接状态
+    clearInterval(pingInterval);
+    pingInterval = setInterval(() => {
+        console.log('ping...');
+        db.ping((err) => {
+            if (err) {
+                console.log('ping error: ' + JSON.stringify(err));
+            }
+        });
+    }, 3600000);
+}
+connect();
 
 querySql = (sqlStr, arr) => {
     return new Promise ((resolve, reject) => {
-        con.query(sqlStr, arr, (err, res) => {
+        db.query(sqlStr, arr, (err, res) => {
             if (err) {
                 reject(err)
             } else {
