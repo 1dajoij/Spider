@@ -12,7 +12,7 @@ let pingInterval;
 
 // 如果数据连接出错，则重新连接
 function handleError(err) {
-    logger.info(err.stack || err);
+    console.error(err);
     connect();
 }
 
@@ -26,7 +26,7 @@ function connect() {
     db = mysql.createConnection(options);
     db.connect(function (err) {
         if (err) {
-            logger.info("error when connecting to db,reConnecting after 2 seconds:", err);
+            console.error(err);
             setTimeout(connect, 2000);
         }
     });

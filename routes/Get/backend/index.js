@@ -5,8 +5,8 @@ const router = express.Router();
 
 // /info_list
 router.post("/info_list", async (req, res) => {
-  const {limit = "30", offset = "0"} = req.query;
-  let {type} = req.query;
+  const {limit = "30", offset = "0"} = req.body;
+  let {type} = req.body;
   switch(Number(type)) {
     case 1: 
       type = "basic_info";
@@ -35,7 +35,7 @@ router.post("/info_list", async (req, res) => {
 
 // /id_search
 router.post("/id_search", async(req, res) => {
-  const {id} = req.query;
+  const {id} = req.body;
   if(!id) {
     res.send({
       code: 400,
@@ -43,7 +43,7 @@ router.post("/id_search", async(req, res) => {
     });
     return;
   }
-  let {type} = req.query;
+  let {type} = req.body;
   switch(Number(type)) {
     case 1: 
       type = "basic_info";
