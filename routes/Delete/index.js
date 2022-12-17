@@ -4,7 +4,7 @@ const router = express.Router();
 
 // /black_list
 router.post("/black_list", async (req, res) => {
-    let {id} = req.query;
+    let {id} = req.body;
     id = Number(id) || 1;
     querySql(`
         DELETE FROM black_list_movie WHERE id=${id}

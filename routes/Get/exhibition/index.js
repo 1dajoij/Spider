@@ -29,8 +29,8 @@ router.get('/home', async function(_, res) {
 
 // /classify
 router.post("/classify", async (req, res) => {
-  const {limit = "30", offset = "0"} = req.query;
-  let {type, classify_name} = req.query;
+  const {limit = "30", offset = "0"} = req.body;
+  let {type, classify_name} = req.body;
   let sort = "ASC";
   // 保证type的可行性
   switch(type) {
@@ -119,7 +119,7 @@ router.post("/classify", async (req, res) => {
 
 // /specific
 router.post("/specific", async (req, res) => {
-  const {id} = req.query;
+  const {id} = req.body;
   if(!id) res.send({code: 400});
   const sqlStr = `
   SELECT * FROM specific_info where id=?
@@ -132,7 +132,7 @@ router.post("/specific", async (req, res) => {
 
 // /search
 router.post("/search", async (req, res) => {
-  const {name="",limit = "30", offset = "0"} = req.query;
+  const {name="",limit = "30", offset = "0"} = req.body;
   const [{"count(id)": len}] = await querySql(`
     SELECT count(id) from basic_info
     WHERE name like '%${name}%'
@@ -153,7 +153,7 @@ router.post("/search", async (req, res) => {
 
 // /search_lenovo
 router.post("/search_lenovo", async (req, res) => {
-  const {name=""} = req.query;
+  const {name=""} = req.body;
   const wordList = await querySql(`
     SELECT name,id from basic_info
     WHERE name LIKE "%${name}%"
