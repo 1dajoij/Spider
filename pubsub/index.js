@@ -22,10 +22,6 @@ Pubsub.subscribe("updata_specific", async() => {
         WHERE id IN 
         (SELECT id from need_updata_list)
     `;
-    // 修复 信息 错误 --- (网好慢。。。)
-    // const queryStr = `
-    //     SELECT id,name from basic_info Where id > 2224
-    // `;
     const res = await querySql(queryStr)
     console.log("开始更新数据库！！！");
     autoIdRun(res, true);

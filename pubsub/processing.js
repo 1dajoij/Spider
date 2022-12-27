@@ -57,7 +57,7 @@ function autoFsRun(list) {
     }
 }
 
-function autoIdRun(list, updata = false) {
+function autoIdRun(list, updata = false, repair = false) {
     const g = idGen(list);
 
     let counter;
@@ -77,12 +77,11 @@ function autoIdRun(list, updata = false) {
             const {cout, R} = _next.value;
             counter = cout;
             R.then(res => {
-                // 进行爬取操作
-
-                // 修复信息错误
-                // updataInfo(res, list[cout])
+                // 进行爬取操作 --- updataSpecific 在某种情况也会调用 getSpecific
                 if(updata) {
                     updataSpecific(res, list[cout]);
+                } else if (repair) {
+                    updataInfo(res, list[cout]);
                 } else {
                     getSpecific(res, list[cout]);
                 }

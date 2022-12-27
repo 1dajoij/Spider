@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-axios.defaults.baseURL = "http://www.dmh8.me";
+axios.defaults.baseURL = "http://www.dm88.me";
 
 
 axios.interceptors.request.use(function (config) {

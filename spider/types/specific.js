@@ -164,7 +164,7 @@ async function updataInfo(html, {id, name}) {
     );
     console.log(`id:${id} 信息已更新`)
     Pubsub.publish("pages_id_end", name);
-}
+};
 
 function textInfo($) {
     // 导演
@@ -212,7 +212,7 @@ function textInfo($) {
         region,
         isUpdate
     }
-}
+};
 
 function getOptimal_list($, textReg = /飞速高速/g) {
     const len = $("li [href*=playlist]").length;
