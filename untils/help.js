@@ -1,3 +1,4 @@
+// 做一些因为某些原因导致数据库数据出现问题的补救操作
 const querySql = require("../mysql");
 const {autoIdRun} = require("../pubsub/processing");
 

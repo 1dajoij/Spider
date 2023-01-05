@@ -3,7 +3,7 @@ const querySql = require("../../mysql");
 const router = express.Router();
 
 // /black_list
-router.post("/black_list", async (req, res) => {
+router.post("/black_list", (req, res) => {
     let {id} = req.body;
     id = Number(id) || 1;
     querySql(`

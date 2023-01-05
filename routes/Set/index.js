@@ -5,7 +5,7 @@ const router = express.Router();
 // /black_list
 router.post("/black_list", async (req, res) => {
     let {id} = req.body;
-    id = Number(id) | 0;
+    id = Number(id) || 0;
     const [{"count(id)": n}] = await querySql(`
         SELECT count(id) from basic_info WHERE id = ${id}
     `);

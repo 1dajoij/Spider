@@ -17,20 +17,27 @@ router.post("/info_list", async (req, res) => {
     default:
       type = "basic_info";
   }
-  const queryStr = `
-    SELECT * from ${type}
-    ORDER BY id DESC
-    limit ${limit} offset ${offset}
-  `;
-  const [{"count(id)": len}] = await querySql(`
-    SELECT count(id) from ${type}
-  `)
-  const infoList = await querySql(queryStr);
-  res.send({
-    code: 200,
-    infoList,
-    allLength: len
-  })
+  try {
+    const queryStr = `
+      SELECT * from ${type}
+      ORDER BY id DESC
+      limit ${limit} offset ${offset}
+    `;
+    const [{"count(id)": len}] = await querySql(`
+      SELECT count(id) from ${type}
+    `)
+    const infoList = await querySql(queryStr);
+    res.send({
+      code: 200,
+      infoList,
+      allLength: len
+    })
+  } catch(err) {
+    res.send({
+      code: 400,
+      message: "请检查参数是否正确"
+    })
+  }
 });
 
 // /id_search
@@ -58,61 +65,89 @@ router.post("/id_search", async(req, res) => {
     SELECT * from ${type}
     WHERE id = ${id}
   `;
-  const list = await querySql(queryStr);
-  if(!list.length) {
+  try {
+    const list = await querySql(queryStr);
+    if(!list.length) {
+      res.send({
+        code: 400,
+        message: "请检查传入id是否正确!"
+      });
+      return;
+    }
+    res.send({
+      code: 200,
+      list
+    })
+  } catch(err) {
     res.send({
       code: 400,
-      message: "请检查传入id是否正确!"
-    });
-    return;
+      message: "请检查参数是否正确"
+    })
   }
-  res.send({
-    code: 200,
-    list
-  })
 });
 
 // /black_list
 router.post("/black_list", async (_, res) => {
-  const blackList = await querySql(`
-    SELECT (id) from black_list_movie
-  `);
-  res.send({
-    code: 200,
-    blackList
-  })
+  try {
+    const blackList = await querySql(`
+      SELECT (id) from black_list_movie
+    `);
+    res.send({
+      code: 200,
+      blackList
+    })
+  } catch(err) {
+    res.send({
+      code: 400,
+      message: "请检查参数是否正确"
+    })
+  }
 });
 
 // /errorinfo_id_list
 router.post("/errorinfo_id_list", async (_, res) => {
-  const [{"count(id)": len}] = await querySql(`
-    SELECT count(id) from error_singlepage_list
-  `);
-  const queryStr = `
-    SELECT * from error_singlepage_list
-  `;
-  const list = await querySql(queryStr);
-  res.send({
-    code: 200,
-    list,
-    length: len
-  });
+  try {
+    const [{"count(id)": len}] = await querySql(`
+      SELECT count(id) from error_singlepage_list
+    `);
+    const queryStr = `
+      SELECT * from error_singlepage_list
+    `;
+    const list = await querySql(queryStr);
+    res.send({
+      code: 200,
+      list,
+      length: len
+    });
+  } catch(err) {
+    res.send({
+      code: 400,
+      message: "请检查参数是否正确"
+    })
+  }
 });
 
 // /error_episodes_list
 router.post("/error_episodes_list", async (_, res) => {
-  const [{"count(id)": len}] = await querySql(`
-    SELECT count(id) from error_episodes_list
-  `);
-  const queryStr = `
-    SELECT * from error_episodes_list
-  `;
-  const list = await querySql(queryStr);
-  res.send({
-    code: 200,
-    list,
-    length: len
-  });
+  try {
+    const [{"count(id)": len}] = await querySql(`
+      SELECT count(id) from error_episodes_list
+    `);
+    const queryStr = `
+      SELECT * from error_episodes_list
+    `;
+    const list = await querySql(queryStr);
+    res.send({
+      code: 200,
+      list,
+      length: len
+    });
+  } catch(err) {
+    res.send({
+      code: 400,
+      message: "请检查参数是否正确"
+    })
+  }
 });
 
 // /updata_info
