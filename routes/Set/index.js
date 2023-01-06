@@ -39,7 +39,24 @@ router.post("/black_list", async (req, res) => {
     }
 });
 
-// 
+// /updata_info
+router.post("/updata_info", async (req, res) => {
+    const {id, key, newvalue, type} = req.body;
+    let tableName;
+    if(Number(type) === 1) {
+        tableName = "basic_info"
+    } else if(Number(type) === 2) {
+        tableName = "specific_info"
+    } else {
+        tableName = "basic_info"
+    };
+    try {
+        await querySql(`UPDATE ${tableName} SET ${key} = ${newvalue} WHERE id = ${id}`);
+        res.send({code: 200, message: `${tableName}表：${id}的${key}字段已更新为${newvalue}`});
+    } catch (err) {
+        res.send({code: 400, message: "请检查参数是否正确"});
+    }
+});
 
 
 module.exports = router;
