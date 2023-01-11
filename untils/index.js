@@ -73,22 +73,6 @@ const err_handling = (classify, errInfo) => {
     return new Promise((resolve, reject) => {
         let queryStr;
         switch (classify) {
-            case 1:
-                const {pageId} = errInfo;
-                queryStr = `SELECT id from error_singlepage_list WHERE id=?`;
-                querySql(queryStr, [Number(pageId)]).then(async res => {
-                    if(!res.length) {
-                        queryStr = `insert into error_singlepage_list (id) values (?)`;
-                        await querySql(queryStr, [Number(pageId)]);
-                        console.log(`id为${pageId}的详情页爬取出现问题,请及时修复!!!`);
-                        resolve();
-                    } else {
-                        resolve();
-                    }
-                }).catch(err => {
-                    reject(err);
-                });
-                break;
             case 2:
                 const {id, episodes} = errInfo;
                 queryStr = `select (episodes) from error_episodes_list where pageId=${id}`;
@@ -129,7 +113,7 @@ const err_handling = (classify, errInfo) => {
                 });
                 break;
             default :
-                reject("请将第一个参数改为[0,1,2,3]其中一个");
+                reject("请将第一个参数改为[2,3]其中一个");
                 break;
         }
     });
