@@ -158,13 +158,16 @@ router.post("/filter", async (req, res) => {
 });
 
 // /error_episodes_list
-router.post("/error_episodes_list", async (_, res) => {
+router.post("/error_episodes_list", async (req, res) => {
+  const {limit = 30, offset = 0} = req.body;
   try {
     const [{"count(id)": len}] = await querySql(`
       SELECT count(id) from error_episodes_list
     `);
     const queryStr = `
       SELECT * from error_episodes_list
+      ORDER BY id DESC
+      limit ${limit} offset ${offset}
     `;
     const list = await querySql(queryStr);
     res.send({
@@ -175,9 +178,36 @@ router.post("/error_episodes_list", async (_, res) => {
   } catch(err) {
     res.send({
       code: 400,
-      message: "请检查参数是否正确"
+      message: "网络出现问题，请稍后重试"
     })
   }
+});
+
+// /feedback_list
+// SELECT FROM_UNIXTIME(1673415010) 时间戳转日期
+router.post("/feedback_list", async (req, res) => {
+    const {limit = 30, offset = 0} = req.body;
+    try {
+      const [{"count(id)": len}] = await querySql(
+        `SELECT count(id) FROM feedback_list`
+      );
+      let list = await querySql(`
+        SELECT * FROM feedback_list
+        ORDER BY id DESC
+        limit ${limit} offset ${offset}
+        `
+      );
+      res.send({
+        code: 200,
+        list,
+        length: len
+      });
+    } catch(err) {
+      res.send({
+        code: 400,
+        message: "网络出现问题，请稍后重试"
+      });
+    }
 });
 
 module.exports = router;

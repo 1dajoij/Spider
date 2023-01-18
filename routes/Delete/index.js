@@ -2,7 +2,9 @@ const express = require('express');
 const querySql = require("../../mysql");
 const router = express.Router();
 
-// /black_list - evict
+const Err = {code: 400, message: "请稍后重试"};
+
+// /black_list
 router.post("/black_list", async (req, res) => {
     const {id, type = "evict"} = req.body;
     console.log(id)
@@ -27,11 +29,29 @@ router.post("/black_list", async (req, res) => {
             });
         }
     } catch(err) {
-        res.send({
-            code: 400,
-            message: "请传入正确id后重试"
-        });
+        res.send(Err);
     };
+});
+
+// /feedback_list
+router.post("/feedback_list", async (req, res) => {
+    const {id} = req.body;
+    if(!id) {
+        res.send(Err)
+        return;
+    };
+    try {
+        const queryStr = `
+            DELETE FROM feedback_list WHERE id=${id}
+        `;
+        await querySql(queryStr);
+        res.send({
+            code: 200,
+            message: "删除成功"
+        });
+    } catch(err) {
+        res.send(Err);
+    }
 });
 
 

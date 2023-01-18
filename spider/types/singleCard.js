@@ -37,7 +37,7 @@ function getCardInfo(html, page, info) {
             await updata_sql(id);
             console.log(`${arr.name}数据存储成功！！---当前已完成${hot}个---${info}`);
         } else {
-            if(!res[0].finish_state === arr.finish_state) {
+            if(res[0].finish_state !== arr.finish_state) {
                 await updata_sql(id);
             };
             const queryStr = `
@@ -45,7 +45,7 @@ function getCardInfo(html, page, info) {
                 hot=?,name=?,picUrl=?,score=?,release_data=?,finish_state=?,starring=? 
                 where id=${id}
             `;
-            await querySql(queryStr,[hot,...arr]);
+            await querySql(queryStr,[hot,]);
             console.log(`${id}的数据修改成功！！---${hot}`);
         };
         if(id === last_id) {
