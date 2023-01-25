@@ -53,9 +53,9 @@ publishList.forEach(item => {
 });
 
 // 防止爬取过程中网络超时
-process.on('unhandledRejection', error => {
-    console.error('unhandledRejection', error);
-});
+// process.on('unhandledRejection', error => {
+//     console.error('unhandledRejection', error);
+// });
 
 // 定时爬取数据
 cron.schedule("50 23 * * *", function() {
@@ -63,3 +63,7 @@ cron.schedule("50 23 * * *", function() {
     console.log("Running Spider");
     spider();
 });
+
+
+Pubsub.publish("start_Spider")
+// updata_sql(9866)

@@ -1,7 +1,7 @@
 const cheerio = require("cheerio");
 const Pubsub = require("pubsub-js");
 const querySql = require("../../mysql");
-const {autoRun} = require("../pages/until");
+const { autoRun } = require("../pages/until");
 const {wait, updata_sql} = require("../../untils");
 
 function getPageInfo(id, html) { // 用来获取尾页共多少页 和当前页信息
@@ -22,7 +22,7 @@ function getCardInfo(html, page, info) {
     // 樱花动漫每个 card 爬取有用信息
     const last_id = $(".myui-vodlist").find("li:last-child a").attr("href").match(/view\/(.*?)\.html/)[1];
     $(".myui-vodlist").find(".myui-vodlist__box").each(async (index, item) => {
-        const arr = cardText($, item);
+        const {obj, arr} = cardText($, item);
         const id = $(item).find(".myui-vodlist__thumb").attr("href").match(/view\/(.*?)\.html/)[1];
         const hot = (index + 1) + (page * 30);
         const select = `SELECT finish_state FROM basic_info WHERE id=${id}`
@@ -35,17 +35,17 @@ function getCardInfo(html, page, info) {
             `;
             await querySql(queryStr, [id,...arr,hot,info]);
             await updata_sql(id);
-            console.log(`${arr.name}数据存储成功！！---当前已完成${hot}个---${info}`);
+            console.log(`${obj.name}数据存储成功！！---当前已完成${hot}个---${info}`);
         } else {
-            if(res[0].finish_state !== arr.finish_state) {
+            if(res[0].finish_state !== obj.finish_state) {
                 await updata_sql(id);
             };
             const queryStr = `
                 update basic_info set 
-                hot=?,name=?,picUrl=?,score=?,release_data=?,finish_state=?,starring=? 
+                hot=?,score=?,release_data=?,finish_state=?
                 where id=${id}
             `;
-            await querySql(queryStr,[hot,]);
+            await querySql(queryStr,[hot,obj.score, obj.release_data, obj.finish_state]);
             console.log(`${id}的数据修改成功！！---${hot}`);
         };
         if(id === last_id) {
@@ -63,7 +63,10 @@ function cardText($, item) {
     const release_data = $(item).find(".tag:last").text();
     const finish_state = $(item).find(".pic-text").text();
     const starring = $(item).find(".myui-vodlist__detail p").text().match(/：(.*)/)[1].split(",").join("&");
-    return [name,picUrl,score,release_data,finish_state,starring]
+    return {
+        obj: {name,picUrl,score,release_data,finish_state,starring},
+        arr: [name,picUrl,score,release_data,finish_state,starring]
+    }
 };
 
 module.exports = {

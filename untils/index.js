@@ -185,27 +185,31 @@ const updata_sql = (id, remove) => {
                 DELETE FROM need_updata_list WHERE id=${id}
             `);
             console.log("删除成功");
-            resolve()
+            resolve();
+            return;
         } else {
             const [{"count(id)": n}] = await querySql(`
                 SELECT count(id) from basic_info WHERE id=${id}
             `);
             if(!n) {
                 console.log("所添加的id不存在");
-                resolve()
+                resolve();
+                return;
             };
             const [{"count(id)": r}] = await querySql(`
                 SELECT count(id) from need_updata_list WHERE id=${id}
             `);
             if(r) {
-                console.log("已存在于更新列表中");
+                console.log(`${id}: 已存在于更新列表中`);
                 resolve();
+                return;
             };
             await querySql(`
                 INSERT INTO need_updata_list (id) values (${id})
             `);
             console.log("已插入更新列表中");
             resolve();
+            return;
         }
     })
 };
