@@ -39,19 +39,61 @@ router.get("/home", async (req, res) => {
   const year = getCurYear();
   const sqlSwiper = `
     SELECT * from basic_info
-    WHERE release_data = ${year - 1} OR release_data = ${year}
+    WHERE release_data in (${year-1}, ${year})
     AND basic_info.id
     NOT IN (SELECT id from black_list_movie)
     order by rand() limit 15
   `;
-  const MovieInfo = serverObj.get("MovieInfo");
-  const recommendList = await querySql(sqlSwiper);
-  res.send({
-    code: 200,
-    recommendList,
-    MovieInfo
-  });
-})
+  try{
+    const MovieInfo = serverObj.get("MovieInfo");
+    const recommendList = await querySql(sqlSwiper);
+    res.send({
+      code: 200,
+      recommendList,
+      MovieInfo
+    });
+  } catch(err) {
+    res.send(questErr)
+  }
+});
+
+// /swiper
+router.get("/swiper", async (req, res) => {
+  const { type } = req.query;
+  const year = getCurYear();
+  let typeStr;
+  switch(Number(type)) {
+    case 1 :
+      typeStr = "National_comics-html";
+      break;
+    case 2 :
+      typeStr = "day_comic-html";
+      break
+    case 3 :
+      typeStr = "Movie-html";
+      break
+    case 4 :
+      typeStr = "American_comic-html";
+      break
+  };
+  const sqlSwiper = `
+    SELECT * from basic_info
+    WHERE release_data in (${year-1}, ${year})
+    AND basic_info.id
+    NOT IN (SELECT id from black_list_movie)
+    AND type = '${typeStr}'
+    order by rand() limit 15
+  `;
+  try {
+    const recommendList = await querySql(sqlSwiper);
+    res.send({
+      code: 200,
+      recommendList
+    });
+  } catch(err) {
+    res.send(questErr)
+  }
+});
 
 // /classify
 router.post("/classify", async (req, res) => {
