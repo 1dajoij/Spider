@@ -214,6 +214,11 @@ const updata_sql = (id, remove) => {
     })
 };
 
+const getCurYear = () => {
+    const d = new Date();
+    return d.getYear() + 1900
+}
+
 module.exports = {
     card_href,
     skip_href,
@@ -226,4 +231,5 @@ module.exports = {
     getSqlBasicInfo,
     commonAutoGun,
     updata_sql,
+    getCurYear
 }

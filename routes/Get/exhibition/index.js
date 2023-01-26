@@ -1,6 +1,6 @@
 const express = require('express');
 const { serverObj, publishList } = require('../../../spider/constant');
-const { commonAutoGun, getSqlBasicInfo } = require("../../../untils");
+const { commonAutoGun, getSqlBasicInfo, getCurYear } = require("../../../untils");
 const querySql = require("../../../mysql");
 const router = express.Router();
 
@@ -10,29 +10,48 @@ const questErr = {
 };
 
 //  /home
-router.get('/home', async function (_, res) {
-  const obj = {};
-  const recommendList = serverObj.get("recommendList");
-  if (!recommendList) { // 基本上不可能没有
-    res.send("请稍后重试,或联系管理员。");
-    return;
-  };
-  let i = parseInt(Math.random() * recommendList.length);
-  // Math.random() 为 0~1 还是有可能随机到 length的
-  i >= recommendList.length ? i = recommendList.length - 1 : i = i;
+// router.get('/home', async function (_, res) {
+//   const obj = {};
+//   const recommendList = serverObj.get("recommendList");
+//   if (!recommendList) { // 基本上不可能没有
+//     res.send("请稍后重试,或联系管理员。");
+//     return;
+//   };
+//   let i = parseInt(Math.random() * recommendList.length);
+//   // Math.random() 为 0~1 还是有可能随机到 length的
+//   i >= recommendList.length ? i = recommendList.length - 1 : i = i;
 
-  // 使用过滤黑名单方法 先过滤一遍 再返回
-  try {
-    obj["recommendList"] = await getSqlBasicInfo(recommendList[i]);
+//   // 使用过滤黑名单方法 先过滤一遍 再返回
+//   try {
+//     obj["recommendList"] = await getSqlBasicInfo(recommendList[i]);
 
-    const MovieInfo = serverObj.get("MovieInfo");
-    obj["MovieInfo"] = MovieInfo;
+//     const MovieInfo = serverObj.get("MovieInfo");
+//     obj["MovieInfo"] = MovieInfo;
 
-    res.send({ ...obj, code: 200 });
-  } catch(err) {
-    res.send(questErr);
-  }
-});
+//     res.send({ ...obj, code: 200 });
+//   } catch(err) {
+//     res.send(questErr);
+//   }
+// });
+
+// /home_2
+router.get("/home", async (req, res) => {
+  const year = getCurYear();
+  const sqlSwiper = `
+    SELECT * from basic_info
+    WHERE release_data = ${year - 1} OR release_data = ${year}
+    AND basic_info.id
+    NOT IN (SELECT id from black_list_movie)
+    order by rand() limit 15
+  `;
+  const MovieInfo = serverObj.get("MovieInfo");
+  const recommendList = await querySql(sqlSwiper);
+  res.send({
+    code: 200,
+    recommendList,
+    MovieInfo
+  });
+})
 
 // /classify
 router.post("/classify", async (req, res) => {
