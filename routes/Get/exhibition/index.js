@@ -205,7 +205,7 @@ router.post("/specific", async (req, res) => {
   INNER JOIN basic_info as b
   on a.id = b.id where id=${Number(id)}
   AND a.id NOT IN
-  (SELECT a.id from black_list_movie)
+  (SELECT id from black_list_movie)
   `;
   try{ 
     const res = await querySql(sqlStr, [Number(id)])
