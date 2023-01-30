@@ -113,13 +113,13 @@ router.post("/classify", async (req, res) => {
   // 保证classify_name的可行性
   switch (String(classify_name)) {
     case "1":
-      classify_name = publishList[1];
+      classify_name = publishList[3];
       break;
     case "2":
       classify_name = publishList[2];
       break;
     case "3":
-      classify_name = publishList[3];
+      classify_name = publishList[1];
       break;
     case "4":
       classify_name = publishList[4];
@@ -200,9 +200,12 @@ router.post("/specific", async (req, res) => {
     return;
   }
   const sqlStr = `
-  SELECT * FROM specific_info where id=?
-  AND id NOT IN
-  (SELECT id from black_list_movie)
+  SELECT a.*, b.name, b.starring, b.picUrl,b.release_data,
+  b.score FROM specific_info as a
+  INNER JOIN basic_info as b
+  on a.id = b.id where id=${Number(id)}
+  AND a.id NOT IN
+  (SELECT a.id from black_list_movie)
   `;
   try{ 
     const res = await querySql(sqlStr, [Number(id)])
