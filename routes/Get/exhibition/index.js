@@ -8,6 +8,10 @@ const questErr = {
   code: 400,
   message: "请稍后重试"
 };
+const errObj = {
+  code: 400,
+  message: "参数错误！"
+};
 
 //  /home
 // router.get('/home', async function (_, res) {
@@ -34,7 +38,7 @@ const questErr = {
 //   }
 // });
 
-// /home_2
+// /home
 router.get("/home", async (req, res) => {
   const year = getCurYear();
   const sqlSwiper = `
@@ -200,18 +204,27 @@ router.post("/specific", async (req, res) => {
     return;
   }
   const sqlStr = `
-  SELECT a.*, b.name, b.starring, b.picUrl,b.release_data,
-  b.score FROM specific_info as a
-  INNER JOIN basic_info as b
-  on a.id = b.id where id=${Number(id)}
-  AND a.id NOT IN
-  (SELECT id from black_list_movie)
+    SELECT a.*, b.name, b.starring, b.picUrl,b.release_data,
+    b.score FROM specific_info as a
+    INNER JOIN basic_info as b
+    on a.id = b.id where a.id=${Number(id)}
+    AND a.id NOT IN
+    (SELECT id from black_list_movie)
   `;
   try{ 
-    const res = await querySql(sqlStr, [Number(id)])
+    const specific = await querySql(sqlStr);
+    const year = getCurYear();
+    const guess = await querySql(`
+      SELECT * from basic_info
+      WHERE release_data in (${year-1}, ${year})
+      AND basic_info.id
+      NOT IN (SELECT id from black_list_movie)
+      order by rand() limit 12
+    `);
     res.send({
       code: 200,
-      res 
+      specific,
+      guess
     });
   } catch(err) {
     res.send({
@@ -248,7 +261,7 @@ router.post("/search", async (req, res) => {
   } catch(err) {
     res.send(questErr)
   }
-})
+});
 
 // /search_lenovo
 router.post("/search_lenovo", async (req, res) => {
@@ -267,6 +280,36 @@ router.post("/search_lenovo", async (req, res) => {
     })
   } catch(err) {
     res.send(questErr)
+  }
+});
+
+// /video_page_info
+router.post("/video_page_info", async (req, res) => {
+  const { id } = req.body;
+  
+  // 处理边界
+  if(id === null) {
+    res.send(errObj);
+    return;
+  };
+  const queryStr = `
+    SELECT id,name,score,release_data FROM basic_info
+    WHERE id = ${Number(id)}
+    AND id NOT IN
+    (SELECT id from black_list_movie)
+  `;
+  try {
+    const list = await querySql(queryStr);
+    if(list.length) {
+      res.send({
+        code: 200,
+        info: list[0]
+      });
+    } else {
+      res.send(errObj);
+    }
+  } catch(err) {
+    res.send(questErr);
   }
 });
 
