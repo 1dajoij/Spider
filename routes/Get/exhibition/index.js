@@ -285,10 +285,10 @@ router.post("/search_lenovo", async (req, res) => {
 
 // /video_page_info
 router.post("/video_page_info", async (req, res) => {
-  const { id } = req.body;
+  const { id, index } = req.body;
   
   // 处理边界
-  if(id === null) {
+  if(id === null || index === null) {
     res.send(errObj);
     return;
   };
@@ -300,10 +300,31 @@ router.post("/video_page_info", async (req, res) => {
   `;
   try {
     const list = await querySql(queryStr);
-    if(list.length) {
+    const movies = await querySql(`
+      SELECT episodes from specific_info
+      WHERE id = ${Number(id)}
+      AND id NOT IN
+      (SELECT id from black_list_movie)
+    `);
+    const year = getCurYear();
+    const guess = await querySql(`
+      SELECT * from basic_info
+      WHERE release_data in (${year-1}, ${year})
+      AND basic_info.id
+      NOT IN (SELECT id from black_list_movie)
+      order by rand() limit 12
+    `);
+    if(list.length && movies.length) {
+      const { episodes: movieList } = movies[0];
+      const MovieArr = movieList.split("&");
+      const movie = MovieArr[Number(index)];
+      const movieLens = MovieArr.length;
       res.send({
         code: 200,
-        info: list[0]
+        info: list[0],
+        movie,
+        movieLens,
+        guess
       });
     } else {
       res.send(errObj);
